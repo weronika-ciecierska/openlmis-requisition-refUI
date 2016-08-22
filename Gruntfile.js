@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      clean: ['dist', 'src/main/webapp/public/minJs/', 'quality', 'src/main/webapp/messages_*.json'],
+      clean: ['dist', 'src/main/webapp/public/minJs/', 'quality', 'src/main/webapp/messages_*.json', 'src/test/coverage/', 'src/test/karma/'],
       jshint: {
         options: {
           undef: false,
