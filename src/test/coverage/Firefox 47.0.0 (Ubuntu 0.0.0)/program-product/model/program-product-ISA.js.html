@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for program-product/model/program-product-ISA.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">program-product/model/program-product-ISA.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.65% <small>(2 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.65% <small>(2 / 43)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">program-product/model/</a> &#187; program-product-ISA.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+var ProgramProductISA = <span class="fstat-no" title="function not covered" >function (isa) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $.extend(true, this, isa);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.adjustmentValue = this.adjustmentValue || 0;</span>
+<span class="cstat-no" title="statement not covered" >  this.whoRatio = this.whoRatio || 0;</span>
+<span class="cstat-no" title="statement not covered" >  this.dosesPerYear = this.dosesPerYear || 0;</span>
+<span class="cstat-no" title="statement not covered" >  this.wastageFactor = this.wastageFactor || 0;</span>
+<span class="cstat-no" title="statement not covered" >  this.bufferPercentage = this.bufferPercentage || 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.init = <span class="fstat-no" title="function not covered" >function (programProductIsa) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (programProductIsa) {</span>
+<span class="cstat-no" title="statement not covered" >      this.id = programProductIsa.id;</span>
+<span class="cstat-no" title="statement not covered" >      this.adjustmentValue = programProductIsa.adjustmentValue;</span>
+<span class="cstat-no" title="statement not covered" >      this.whoRatio = programProductIsa.whoRatio;</span>
+<span class="cstat-no" title="statement not covered" >      this.dosesPerYear = programProductIsa.dosesPerYear;</span>
+<span class="cstat-no" title="statement not covered" >      this.wastageFactor = programProductIsa.wastageFactor;</span>
+<span class="cstat-no" title="statement not covered" >      this.bufferPercentage = programProductIsa.bufferPercentage;</span>
+<span class="cstat-no" title="statement not covered" >      this.minimumValue = programProductIsa.minimumValue;</span>
+<span class="cstat-no" title="statement not covered" >      this.maximumValue = programProductIsa.maximumValue;</span>
+&nbsp;
+      //For Tanzania
+<span class="cstat-no" title="statement not covered" >      this.populationSource = programProductIsa.populationSource;</span>
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.isPresent = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    return this.isDefined(this.whoRatio) &amp;&amp; this.isDefined(this.dosesPerYear) &amp;&amp;</span>
+      this.isDefined(this.wastageFactor) &amp;&amp; this.isDefined(this.bufferPercentage) &amp;&amp;
+      this.isDefined(this.adjustmentValue);
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.isDefined = <span class="fstat-no" title="function not covered" >function (value) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return !(value === null || value === undefined || value === "-" || value === "." || value[value.length - 1] === '.');</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.isMaxLessThanMinValue = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    return((this.maximumValue &amp;&amp; this.minimumValue) !== null &amp;&amp; utils.parseIntWithBaseTen(this.maximumValue) &lt; utils.parseIntWithBaseTen(this.minimumValue));</span>
+  };
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function getNumericDisplayVal(val)</span>
+  {
+<span class="cstat-no" title="statement not covered" >    if( val === undefined || isNaN(val) )</span>
+<span class="cstat-no" title="statement not covered" >      return '#';</span>
+    else
+<span class="cstat-no" title="statement not covered" >      return val;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.getIsaFormula = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >    var adjustmentVal = utils.parseIntWithBaseTen(this.adjustmentValue);</span>
+<span class="cstat-no" title="statement not covered" >    adjustmentVal = adjustmentVal &gt; 0 ? getNumericDisplayVal(adjustmentVal) : "(" + getNumericDisplayVal(adjustmentVal) + ")";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var whoRatioVal = (this.whoRatio / 100).toFixed(5);</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return "(population) * " +</span>
+        getNumericDisplayVal( (this.whoRatio / 100).toFixed(5) ) +
+      " * " + getNumericDisplayVal( utils.parseIntWithBaseTen(this.dosesPerYear) ) +
+      " * " + getNumericDisplayVal( parseFloat(this.wastageFactor).toFixed(3) ) +
+      " / 12 * " + getNumericDisplayVal( (1 + this.bufferPercentage / 100).toFixed(5) ) +
+      " + " + adjustmentVal;
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  ProgramProductISA.prototype.calculate = <span class="fstat-no" title="function not covered" >function (population) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var isaValue = 0;</span>
+<span class="cstat-no" title="statement not covered" >    if (population !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      isaValue = Math.ceil(parseInt(population, 10) *</span>
+        (parseFloat(this.whoRatio) / 100) *
+        (utils.parseIntWithBaseTen(this.dosesPerYear)) *
+        (parseFloat(this.wastageFactor) / 12) *
+        (1 + parseFloat(this.bufferPercentage) / 100) +
+        (utils.parseIntWithBaseTen(this.adjustmentValue)));
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.minimumValue !== null &amp;&amp; isaValue &lt; this.minimumValue)</span>
+<span class="cstat-no" title="statement not covered" >        return this.minimumValue;</span>
+<span class="cstat-no" title="statement not covered" >      if (this.maximumValue !== null &amp;&amp; isaValue &gt; this.maximumValue)</span>
+<span class="cstat-no" title="statement not covered" >        return this.maximumValue;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      isaValue = isaValue &lt; 0 ? 0 : isaValue;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return isaValue;</span>
+  };
+};</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

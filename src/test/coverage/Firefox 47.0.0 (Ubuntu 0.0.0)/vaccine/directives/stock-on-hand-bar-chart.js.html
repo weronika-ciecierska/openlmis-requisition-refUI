@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vaccine/directives/stock-on-hand-bar-chart.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">vaccine/directives/stock-on-hand-bar-chart.js</span></h1>
+    <h2>
+        Statements: <span class="metric">1.54% <small>(1 / 65)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">1.64% <small>(1 / 61)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">vaccine/directives/</a> &#187; stock-on-hand-bar-chart.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015 Clinton Health Access Initiative (CHAI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+&nbsp;
+app.directive('stockchart', ['messageService',<span class="fstat-no" title="function not covered" >function(messageService) {</span>
+<span class="cstat-no" title="statement not covered" >    return{</span>
+            restrict: 'EA',
+            template: '&lt;div ng-show="showGraph" &gt;&lt;/div&gt; &lt;div class="chart-tooltip" style="display: none;z-index:532;position: absolute;width: auto;line-height: 20px;padding: 10px;font-size: 14px;text-align: center;color:#333;background: #FFF;border: 1px solid #ccc;border-radius: 5px;text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;"&gt;&lt;/div&gt;',
+            link: <span class="fstat-no" title="function not covered" >function(scope, elem, attrs){</span>
+<span class="cstat-no" title="statement not covered" >                var stockCards=null;</span>
+<span class="cstat-no" title="statement not covered" >                var forecasts=null;</span>
+<span class="cstat-no" title="statement not covered" >                var xlabel=messageService.get('label.stock.chart.vaccine');</span>
+<span class="cstat-no" title="statement not covered" >                var ylabelDoses=messageService.get('label.stock.chart.doses');</span>
+<span class="cstat-no" title="statement not covered" >                var ylabelMos=messageService.get('label.stock.chart.mos');</span>
+<span class="cstat-no" title="statement not covered" >                var type='vaccine';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                plotArea = $(elem.children()[0]);</span>
+<span class="cstat-no" title="statement not covered" >                plotArea.css({</span>
+                        width: attrs.width,
+                        height: attrs.height
+                      });
+<span class="cstat-no" title="statement not covered" >                var stock = null,</span>
+                    options = {
+                                series:{
+                                   stack: true,
+                                   bars: {
+                                       show: true,
+                                       clickable: true,
+                                       barWidth: 0.3,
+                                       align: "center",
+                                       fill:1,
+                                       label:{
+                                            color:'CCCCCC'
+                                        }
+                                    }
+                                  },
+                                axisLabels: {
+                                   show: true
+                                   },
+                                xaxis: {
+                                    axisLabel: xlabel,
+                                    axisLabelUseCanvas: true,
+                                    axisLabelFontSizePixels: 12,
+                                    axisLabelPadding: 5,
+                                    mode: "categories",
+                                    tickLength: 0
+                                },
+                                yaxis: {
+                                     axisLabel: ylabelDoses,
+                                     axisLabelUseCanvas: true,
+                                     axisLabelFontSizePixels: 12,
+                                     axisLabelPadding: 5
+                                },
+                                grid: {
+                                  labelMargin: 10,
+                                  backgroundColor: '#ffffff',
+                                  color: '#333333',
+                                  borderColor: '#CCCCCC',
+                                  hoverable: true,
+                                  clickable: true
+                                }
+&nbsp;
+                            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var data = scope[attrs.ngModel];</span>
+                // If the data changes somehow, update it in the chart
+<span class="cstat-no" title="statement not covered" >                scope.$watch('data', <span class="fstat-no" title="function not covered" >function(v){</span></span>
+<span class="cstat-no" title="statement not covered" >                     stockCards=v.stockcards;</span>
+<span class="cstat-no" title="statement not covered" >                     if(v.forecasts !== undefined){</span>
+<span class="cstat-no" title="statement not covered" >                        forecasts=v.forecasts;</span>
+                     }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                     options.yaxis.axisLabel=ylabelDoses;</span>
+<span class="cstat-no" title="statement not covered" >                     if( forecasts !== null) {</span>
+<span class="cstat-no" title="statement not covered" >                        options.yaxis.axisLabel=ylabelMos;</span>
+                     }
+<span class="cstat-no" title="statement not covered" >                     var graphData=[];</span>
+<span class="cstat-no" title="statement not covered" >                     if(stockCards !== null )</span>
+                     {
+<span class="cstat-no" title="statement not covered" >                         stockCards.forEach( <span class="fstat-no" title="function not covered" >function (c)</span></span>
+                                             {
+<span class="cstat-no" title="statement not covered" >                                                 var d={};</span>
+<span class="cstat-no" title="statement not covered" >                                                 var data=[];</span>
+<span class="cstat-no" title="statement not covered" >                                                 var color=null;</span>
+<span class="cstat-no" title="statement not covered" >                                                 var n=c.product.primaryName;</span>
+<span class="cstat-no" title="statement not covered" >                                                 var q=c.totalQuantityOnHand;</span>
+<span class="cstat-no" title="statement not covered" >                                                 var id=c.product.id;</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                                 var f=_.find(forecasts, <span class="fstat-no" title="function not covered" >function(forecast){</span> <span class="cstat-no" title="statement not covered" >if(forecast.product.id==id) <span class="cstat-no" title="statement not covered" >return forecast;}</span></span>);</span>
+<span class="cstat-no" title="statement not covered" >                                                 if(f !==undefined)</span>
+                                                 {
+&nbsp;
+                                                     //Set Colors
+<span class="cstat-no" title="statement not covered" >                                                     if(q&lt;=f.forecast.max &amp;&amp; q&gt;f.forecast.orderLevel)</span>
+                                                     {
+<span class="cstat-no" title="statement not covered" >                                                        color="green";</span>
+                                                     }
+                                                     else <span class="cstat-no" title="statement not covered" >if(q&lt;=f.forecast.orderLevel &amp;&amp; q&gt;f.forecast.buffer)</span>
+                                                     {
+<span class="cstat-no" title="statement not covered" >                                                        color="#e5e500";</span>
+                                                     }
+                                                     else <span class="cstat-no" title="statement not covered" >if(q&lt;=f.forecast.buffer)</span>
+                                                     {
+<span class="cstat-no" title="statement not covered" >                                                        color="red";</span>
+                                                     }
+                                                     //Calculate MOS
+<span class="cstat-no" title="statement not covered" >                                                     q=q/f.forecast.buffer;</span>
+                                                 }
+<span class="cstat-no" title="statement not covered" >                                                 var s=[n,q];</span>
+<span class="cstat-no" title="statement not covered" >                                                 data.push(s);</span>
+<span class="cstat-no" title="statement not covered" >                                                 d.data=data;</span>
+<span class="cstat-no" title="statement not covered" >                                                 d.color=color;</span>
+<span class="cstat-no" title="statement not covered" >                                                 graphData.push(d);</span>
+                                              });
+&nbsp;
+&nbsp;
+                     }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                     if(!stock){</span>
+<span class="cstat-no" title="statement not covered" >                        stock = $.plot(plotArea, graphData , options);</span>
+<span class="cstat-no" title="statement not covered" >                        elem.show();</span>
+                    }else{
+<span class="cstat-no" title="statement not covered" >                        stock.setData(graphData);</span>
+<span class="cstat-no" title="statement not covered" >                        stock.setupGrid();</span>
+<span class="cstat-no" title="statement not covered" >                        stock.draw();</span>
+                    }
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                 plotArea.bind("plothover", <span class="fstat-no" title="function not covered" >function(event, pos, item) {</span></span>
+<span class="cstat-no" title="statement not covered" >                     var tip = $('.chart-tooltip');</span>
+<span class="cstat-no" title="statement not covered" >                     if (item) {</span>
+<span class="cstat-no" title="statement not covered" >                        var c=_.find(stockCards, <span class="fstat-no" title="function not covered" >function(card){</span> <span class="cstat-no" title="statement not covered" >if(card.product.primaryName==item.series.data[0][0]) <span class="cstat-no" title="statement not covered" >return card;}</span></span>);</span>
+<span class="cstat-no" title="statement not covered" >                        var offset = stock.getPlotOffset();</span>
+<span class="cstat-no" title="statement not covered" >                        var axis = stock.getAxes();</span>
+<span class="cstat-no" title="statement not covered" >                        var yValue = item.datapoint[1];</span>
+<span class="cstat-no" title="statement not covered" >                        var xValue = item.datapoint[0];</span>
+<span class="cstat-no" title="statement not covered" >                        tip.css('left', pos.pageX-60);</span>
+<span class="cstat-no" title="statement not covered" >                        tip.css('top', pos.pageY-50);</span>
+<span class="cstat-no" title="statement not covered" >                        tip.html(c.product.primaryName+'='+c.totalQuantityOnHand+' Doses');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        tip.show();</span>
+                     } else {
+<span class="cstat-no" title="statement not covered" >                        tip.hide();</span>
+                     }
+                  });
+&nbsp;
+            }
+        };
+}]);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

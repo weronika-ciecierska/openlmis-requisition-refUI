@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vaccine/inventory/controller/configuration-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">vaccine/inventory/controller/configuration-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.41% <small>(3 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.41% <small>(3 / 68)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">vaccine/inventory/controller/</a> &#187; configuration-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015 Clinton Health Access Initiative (CHAI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function VaccineInventoryConfigurationController($scope,programs,DemographicEstimateCategories,VaccineInventoryConfigurations,VaccineProgramProducts,configurations,SaveVaccineInventoryConfigurations,localStorageService,$location) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.userPrograms=programs;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.configToAdd={};</span>
+<span class="cstat-no" title="statement not covered" >    $scope.configToAdd.batchTracked=false;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.configToAdd.vvmTracked=false;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.configToAdd.survivingInfants = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    DemographicEstimateCategories.get({}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.demographicCategories = data.estimate_categories;</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.loadProducts=<span class="fstat-no" title="function not covered" >function(programId){</span></span>
+<span class="cstat-no" title="statement not covered" >        VaccineProgramProducts.get({programId:programId},<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >           $scope.allProducts=data.programProductList;</span>
+<span class="cstat-no" title="statement not covered" >           $scope.loadConfigurations();</span>
+        });
+    };
+<span class="cstat-no" title="statement not covered" >    $scope.loadConfigurations=<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        VaccineInventoryConfigurations.get(<span class="fstat-no" title="function not covered" >function(data)</span></span>
+        {
+<span class="cstat-no" title="statement not covered" >           $scope.configurations=data.Configurations;</span>
+<span class="cstat-no" title="statement not covered" >           updateProductToDisplay($scope.configurations);</span>
+        });
+    };
+<span class="cstat-no" title="statement not covered" >    $scope.addConfiguration=<span class="fstat-no" title="function not covered" >function(configToAdd)</span></span>
+    {
+<span class="cstat-no" title="statement not covered" >        configToAdd.type='PRODUCT';</span>
+<span class="cstat-no" title="statement not covered" >        console.log(JSON.stringify($scope.configurations[0]));</span>
+<span class="cstat-no" title="statement not covered" >        console.log(JSON.stringify(configToAdd));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.configurations.push(configToAdd);</span>
+<span class="cstat-no" title="statement not covered" >        updateProductToDisplay($scope.configurations);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.configToAdd={};</span>
+<span class="cstat-no" title="statement not covered" >        $scope.configToAdd.batchTracked=false;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.configToAdd.vvmTracked=false;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.configToAdd.survivingInfants = false;</span>
+&nbsp;
+&nbsp;
+    };
+<span class="cstat-no" title="statement not covered" >    $scope.$watch('configurations',<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        if($scope.configurations !==undefined)</span>
+        {
+&nbsp;
+        }
+    });
+<span class="cstat-no" title="statement not covered" >    $scope.visibleTab = 'PRODUCT';</span>
+<span class="cstat-no" title="statement not covered" >    $scope.changeTab=<span class="fstat-no" title="function not covered" >function(key){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.visibleTab=key;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.saveConfigurations=<span class="fstat-no" title="function not covered" >function()</span></span>
+    {
+<span class="cstat-no" title="statement not covered" >        SaveVaccineInventoryConfigurations.update($scope.configurations,<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.configurations=data.Configurations;</span>
+<span class="cstat-no" title="statement not covered" >            updateProductToDisplay($scope.configurations);</span>
+        });
+    };
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function updateProductToDisplay(configurationProducts)</span>
+    {
+<span class="cstat-no" title="statement not covered" >         var toExclude = _.pluck(_.pluck(configurationProducts, 'product'), 'primaryName');</span>
+<span class="cstat-no" title="statement not covered" >         $scope.productsToDisplay = $.grep($scope.allProducts, <span class="fstat-no" title="function not covered" >function (productObject) {</span></span>
+<span class="cstat-no" title="statement not covered" >                 return $.inArray(productObject.product.primaryName, toExclude) == -1;</span>
+         });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if($scope.userPrograms.length &gt; 1)</span>
+    {
+<span class="cstat-no" title="statement not covered" >        $scope.showPrograms=true;</span>
+        //TODO: load stock cards on program change
+<span class="cstat-no" title="statement not covered" >        $scope.loadProducts($scope.userPrograms[0].id);</span>
+&nbsp;
+    }
+    else <span class="cstat-no" title="statement not covered" >if($scope.userPrograms.length === 1){</span>
+<span class="cstat-no" title="statement not covered" >        $scope.showPrograms=false;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.loadProducts($scope.userPrograms[0].id);</span>
+    }
+&nbsp;
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.loadRights = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.rights = localStorageService.get(localStorageKeys.RIGHT);</span>
+    }();
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.hasPermission = <span class="fstat-no" title="function not covered" >function (permission) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if ($scope.rights !== undefined &amp;&amp; $scope.rights !== null) {</span>
+<span class="cstat-no" title="statement not covered" >              var rights = JSON.parse($scope.rights);</span>
+<span class="cstat-no" title="statement not covered" >              var rightNames = _.pluck(rights, 'name');</span>
+<span class="cstat-no" title="statement not covered" >              return rightNames.indexOf(permission) &gt; -1;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+     };
+&nbsp;
+}
+VaccineInventoryConfigurationController.resolve = {
+&nbsp;
+        programs:<span class="fstat-no" title="function not covered" >function ($q, $timeout, VaccineInventoryPrograms) {</span>
+<span class="cstat-no" title="statement not covered" >            var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >            var programs={};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                     VaccineInventoryPrograms.get({},<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                       programs=data.programs;</span>
+<span class="cstat-no" title="statement not covered" >                        deferred.resolve(programs);</span>
+                     });
+            }, 100);
+<span class="cstat-no" title="statement not covered" >            return deferred.promise;</span>
+         },
+&nbsp;
+        configurations:<span class="fstat-no" title="function not covered" >function ($q, $timeout, VaccineInventoryConfigurations) {</span>
+<span class="cstat-no" title="statement not covered" >             var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >             var configurations=[];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                VaccineInventoryConfigurations.get({},<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                     configurations=data;</span>
+<span class="cstat-no" title="statement not covered" >                     deferred.resolve(configurations);</span>
+                });
+            }, 100);
+<span class="cstat-no" title="statement not covered" >            return deferred.promise;</span>
+        }
+&nbsp;
+};</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

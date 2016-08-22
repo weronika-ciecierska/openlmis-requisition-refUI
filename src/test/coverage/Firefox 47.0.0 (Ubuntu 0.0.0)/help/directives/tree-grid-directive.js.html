@@ -1,0 +1,1716 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for help/directives/tree-grid-directive.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">help/directives/tree-grid-directive.js</span></h1>
+    <h2>
+        Statements: <span class="metric">0.3% <small>(1 / 333)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 160)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 50)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">0.3% <small>(1 / 332)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">help/directives/</a> &#187; tree-grid-directive.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+app.directive('treeGrid', <span class="fstat-no" title="function not covered" >function ($timeout) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            restrict: 'E',
+            //templateUrl:'tree-grid-template.html',
+            //template:"&lt;div&gt;&lt;table class=\"table table-bordered table-striped tree-grid\"&gt;&lt;thead class=\"text-primary\"&gt;&lt;tr&gt;&lt;th&gt;{{expandingProperty}}&lt;/th&gt;&lt;th ng-repeat=\"col in colDefinitions\"&gt;{{col.displayName || col.field}}&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr ng-repeat=\"row in tree_rows | filter:{visible:true} track by row.branch.uid\" ng-class=\"'level-' + {{ row.level }} + (row.branch.selected ? ' active':'')\" class=\"tree-grid-row\"&gt;&lt;td class=\"text-primary\"&gt;&lt;a ng-click=\"user_clicks_branch(row.branch)\"&gt;&lt;i ng-class=\"row.tree_icon\" ng-click=\"row.branch.expanded = !row.branch.expanded\" class=\"indented tree-icon\"&gt;&lt;/i&gt;&lt;/a&gt;&lt;span class=\"indented tree-label\"&gt;{{row.branch[expandingProperty]}}&lt;/span&gt;&lt;/td&gt;&lt;td ng-repeat=\"col in colDefinitions\"&gt;{{row.branch[col.field]}}&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;table&gt;&lt;/div&gt;",
+            template: "&lt;div&gt;" +
+                " &lt;table class=\"table table-bordered table-striped tree-grid\"&gt;" +
+                "   &lt;thead class=\"text-primary\"&gt;" +
+                "  &lt;tr&gt;" +
+                "     &lt;th&gt;{{expandingProperty}}&lt;/th&gt;" +
+                "     &lt;th ng-repeat=\"col in colDefinitions\"&gt;{{col.displayName || col.field}}&lt;/th&gt;" +
+                " &lt;/tr&gt;" +
+                "   &lt;/thead&gt;" +
+                "  &lt;tbody&gt;  &lt;tr ng-repeat=\"row in tree_rows | filter:{visible:true} track by row.branch.uid\"  ng-class=\"'level-'+ {{ row.level }} + (row.branch.selected ? 'active ':'')\" class=\"tree-grid-row\"&gt;" +
+                "   &lt;td   ng-class=\"row.branch.category ? 'text-primary':'tree-link-a'\"&gt;&lt;a ng-click=\"user_clicks_branch(row.branch)\"&gt;&lt;i ng-class=\"row.tree_icon\"   ng-click=\"row.branch.expanded = !row.branch.expanded\"" +
+                "     class=\" indented tree-icon\"&gt;&lt;/i&gt;" +
+                "    &lt;/a&gt;&lt;span class=\"indented tree-label\" ng-click=\"user_clicks_branch(row.branch)\"&gt;" +
+                "       {{row.branch[expandingProperty]}}&lt;/span&gt; " +
+                "    &lt;/td&gt; " +
+                "        &lt;td ng-repeat=\"col in colDefinitions\"&gt;{{row.branch[col.field]}}&lt;/td&gt;" +
+                "        &lt;tr &gt;" +
+                "   &lt;/tbody&gt;" +
+                "    &lt;/table&gt;" +
+                "  &lt;/div&gt;",
+            replace: true,
+            scope: {
+                treeData: '=',
+                colDefs: '=',
+                expandOn: '=',
+                onSelect: '&amp;',
+                initialSelection: '@',
+                treeControl: '='
+            },
+            link: <span class="fstat-no" title="function not covered" >function (scope, element, attrs) {</span>
+<span class="cstat-no" title="statement not covered" >                var error, expandingProperty, expand_all_parents, expand_level, for_all_ancestors, for_each_branch, get_parent, n, on_treeData_change, select_branch, selected_branch, tree;</span>
+&nbsp;
+//                    error = function (s) {
+//                    console.log('ERROR:' + s);
+//                    debugger;
+//                    return void 0;
+//                    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!attrs.iconExpand ) {</span>
+<span class="cstat-no" title="statement not covered" >                    attrs.iconExpand = 'icon-plus  glyphicon glyphicon-plus  fa fa-plus';</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (!attrs.iconCollapse) {</span>
+<span class="cstat-no" title="statement not covered" >                    attrs.iconCollapse = 'icon-minus glyphicon glyphicon-minus fa fa-minus';</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (!attrs.iconLeaf) {</span>
+<span class="cstat-no" title="statement not covered" >                    attrs.iconLeaf = 'icon-file  glyphicon glyphicon-file  fa fa-file';</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (!attrs.expandLevel ) {</span>
+<span class="cstat-no" title="statement not covered" >                    attrs.expandLevel = '3';</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                expand_level = parseInt(attrs.expandLevel, 10);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!scope.treeData) {</span>
+                    ////alert('no treeData defined for the tree!');
+<span class="cstat-no" title="statement not covered" >                    return;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if (scope.treeData.length === null) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (treeData.label) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.treeData = [treeData];</span>
+                    } else {
+                        ////alert('treeData should be an array of root branches');
+<span class="cstat-no" title="statement not covered" >                        return;</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                if (attrs.expandOn) {</span>
+<span class="cstat-no" title="statement not covered" >                    expandingProperty = scope.expandOn;</span>
+<span class="cstat-no" title="statement not covered" >                    scope.expandingProperty = scope.expandOn;</span>
+                }
+                else {
+<span class="cstat-no" title="statement not covered" >                    var _firstRow = scope.treeData[0],</span>
+                        _keys = Object.keys(_firstRow);
+<span class="cstat-no" title="statement not covered" >                    for (var i = 0, len = _keys.length; i &lt; len; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (typeof(_firstRow[_keys[i]]) === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >                            expandingProperty = _keys[i];</span>
+<span class="cstat-no" title="statement not covered" >                            break;</span>
+                        }
+                    }
+<span class="cstat-no" title="statement not covered" >                    if (!expandingProperty) <span class="cstat-no" title="statement not covered" >expandingProperty = _keys[0];</span></span>
+<span class="cstat-no" title="statement not covered" >                    scope.expandingProperty = expandingProperty;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (!attrs.colDefs) {</span>
+<span class="cstat-no" title="statement not covered" >                    var _col_defs = [],</span>
+                    _firstRow1 = scope.treeData[0], _unwantedColumn = ['children', 'level', 'expanded', expandingProperty];
+<span class="cstat-no" title="statement not covered" >                    for (var idx in _firstRow1) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (_unwantedColumn.indexOf(idx) === -1)</span>
+<span class="cstat-no" title="statement not covered" >                            _col_defs.push({field: idx});</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    scope.colDefinitions = _col_defs;</span>
+                }
+                else {
+<span class="cstat-no" title="statement not covered" >                    console.log(scope.colDefs);</span>
+<span class="cstat-no" title="statement not covered" >                    scope.colDefinitions = scope.colDefs;</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                for_each_branch = <span class="fstat-no" title="function not covered" >function (f) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var do_f, root_branch, _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                    do_f = <span class="fstat-no" title="function not covered" >function (branch, level) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var child, _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                        f(branch, level);</span>
+<span class="cstat-no" title="statement not covered" >                        if (branch.children) {</span>
+<span class="cstat-no" title="statement not covered" >                            _ref = branch.children;</span>
+<span class="cstat-no" title="statement not covered" >                            _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                            for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                child = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                                _results.push(do_f(child, level + 1));</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            return _results;</span>
+                        }
+                    };
+<span class="cstat-no" title="statement not covered" >                    _ref = scope.treeData;</span>
+<span class="cstat-no" title="statement not covered" >                    _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                    for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                        root_branch = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                        _results.push(do_f(root_branch, 1));</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return _results;</span>
+                };
+<span class="cstat-no" title="statement not covered" >                selected_branch = null;</span>
+<span class="cstat-no" title="statement not covered" >                select_branch = <span class="fstat-no" title="function not covered" >function (branch) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (!branch) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (selected_branch ) {</span>
+<span class="cstat-no" title="statement not covered" >                            selected_branch.selected = false;</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        selected_branch = null;</span>
+<span class="cstat-no" title="statement not covered" >                        return;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    if (branch !== selected_branch) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (selected_branch) {</span>
+<span class="cstat-no" title="statement not covered" >                            selected_branch.selected = false;</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        branch.selected = true;</span>
+<span class="cstat-no" title="statement not covered" >                        selected_branch = branch;</span>
+<span class="cstat-no" title="statement not covered" >                        expand_all_parents(branch);</span>
+<span class="cstat-no" title="statement not covered" >                        if (branch.onSelect ) {</span>
+<span class="cstat-no" title="statement not covered" >                            return $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                                return branch.onSelect(branch);</span>
+                            });
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            if (scope.onSelect) {</span>
+<span class="cstat-no" title="statement not covered" >                                return $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    return scope.onSelect({</span>
+                                        branch: branch
+                                    });
+                                });
+                            }
+                        }
+                    }
+                };
+<span class="cstat-no" title="statement not covered" >                scope.user_clicks_branch = <span class="fstat-no" title="function not covered" >function (branch) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (branch !== selected_branch) {</span>
+<span class="cstat-no" title="statement not covered" >                        return select_branch(branch);</span>
+                    }
+                };
+<span class="cstat-no" title="statement not covered" >                get_parent = <span class="fstat-no" title="function not covered" >function (child) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var parent;</span>
+<span class="cstat-no" title="statement not covered" >                    parent = void 0;</span>
+<span class="cstat-no" title="statement not covered" >                    if (child.parent_uid) {</span>
+<span class="cstat-no" title="statement not covered" >                        for_each_branch(<span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (b.uid === child.parent_uid) {</span>
+<span class="cstat-no" title="statement not covered" >                                parent = b;</span>
+<span class="cstat-no" title="statement not covered" >                                return parent;</span>
+                            }
+                        });
+                    }
+<span class="cstat-no" title="statement not covered" >                    return parent;</span>
+                };
+<span class="cstat-no" title="statement not covered" >                for_all_ancestors = <span class="fstat-no" title="function not covered" >function (child, fn) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var parent;</span>
+<span class="cstat-no" title="statement not covered" >                    parent = get_parent(child);</span>
+<span class="cstat-no" title="statement not covered" >                    if (parent ) {</span>
+<span class="cstat-no" title="statement not covered" >                        fn(parent);</span>
+<span class="cstat-no" title="statement not covered" >                        return for_all_ancestors(parent, fn);</span>
+                    }
+                };
+<span class="cstat-no" title="statement not covered" >                expand_all_parents = <span class="fstat-no" title="function not covered" >function (child) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    return for_all_ancestors(child, <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        b.expanded = true;</span>
+<span class="cstat-no" title="statement not covered" >                        return b.expanded ;</span>
+                    });
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.tree_rows = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                on_treeData_change = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var add_branch_to_list, root_branch, _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                    for_each_branch(<span class="fstat-no" title="function not covered" >function (b, level) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if (!b.uid) {</span>
+<span class="cstat-no" title="statement not covered" >                            b.uid = "" + Math.random();</span>
+<span class="cstat-no" title="statement not covered" >                            return b.uid;</span>
+                        }
+                    });
+<span class="cstat-no" title="statement not covered" >                    for_each_branch(<span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var child, _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                        if (angular.isArray(b.children)) {</span>
+<span class="cstat-no" title="statement not covered" >                            _ref = b.children;</span>
+<span class="cstat-no" title="statement not covered" >                            _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                            for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                child = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                                _results.push(child.parent_uid = b.uid);</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            return _results;</span>
+                        }
+                    });
+<span class="cstat-no" title="statement not covered" >                    scope.tree_rows = [];</span>
+<span class="cstat-no" title="statement not covered" >                    for_each_branch(<span class="fstat-no" title="function not covered" >function (branch) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var child, f;</span>
+<span class="cstat-no" title="statement not covered" >                        if (branch.children) {</span>
+<span class="cstat-no" title="statement not covered" >                            if (branch.children.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                f = <span class="fstat-no" title="function not covered" >function (e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    if (typeof e === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >                                        return {</span>
+                                            label: e,
+                                            children: []
+                                        };
+                                    } else {
+<span class="cstat-no" title="statement not covered" >                                        return e;</span>
+                                    }
+                                };
+<span class="cstat-no" title="statement not covered" >                                branch.children = (<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    var _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                                    _ref = branch.children;</span>
+<span class="cstat-no" title="statement not covered" >                                    _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                                    for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                        child = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                                        _results.push(f(child));</span>
+                                    }
+<span class="cstat-no" title="statement not covered" >                                    return _results;</span>
+                                })();
+<span class="cstat-no" title="statement not covered" >                                return branch.children;</span>
+                            }
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            branch.children = [];</span>
+<span class="cstat-no" title="statement not covered" >                            return branch.children;</span>
+                        }
+                    });
+<span class="cstat-no" title="statement not covered" >                    add_branch_to_list = <span class="fstat-no" title="function not covered" >function (level, branch, visible) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        var child, child_visible, tree_icon, _i, _len, _ref, _results;</span>
+<span class="cstat-no" title="statement not covered" >                        if (branch.expanded === null) {</span>
+<span class="cstat-no" title="statement not covered" >                            branch.expanded = false;</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        if (!branch.children || branch.children.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                            tree_icon = attrs.iconLeaf;</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            if (branch.expanded) {</span>
+<span class="cstat-no" title="statement not covered" >                                tree_icon = attrs.iconCollapse;</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                tree_icon = attrs.iconExpand;</span>
+                            }
+                        }
+<span class="cstat-no" title="statement not covered" >                        branch.level = level;</span>
+<span class="cstat-no" title="statement not covered" >                        scope.tree_rows.push({</span>
+                            level: level,
+                            branch: branch,
+                            label: branch[expandingProperty],
+                            tree_icon: tree_icon,
+                            visible: visible
+                        });
+<span class="cstat-no" title="statement not covered" >                        if (branch.children ) {</span>
+<span class="cstat-no" title="statement not covered" >                            _ref = branch.children;</span>
+<span class="cstat-no" title="statement not covered" >                            _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                            for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                child = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                                child_visible = visible &amp;&amp; branch.expanded;</span>
+<span class="cstat-no" title="statement not covered" >                                _results.push(add_branch_to_list(level + 1, child, child_visible));</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            return _results;</span>
+                        }
+                    };
+<span class="cstat-no" title="statement not covered" >                    _ref = scope.treeData;</span>
+<span class="cstat-no" title="statement not covered" >                    _results = [];</span>
+<span class="cstat-no" title="statement not covered" >                    for (_i = 0, _len = _ref.length; _i &lt; _len; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >                        root_branch = _ref[_i];</span>
+<span class="cstat-no" title="statement not covered" >                        _results.push(add_branch_to_list(1, root_branch, true));</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return _results;</span>
+                };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                scope.$watch('treeData', on_treeData_change, true);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (attrs.initialSelection ) {</span>
+<span class="cstat-no" title="statement not covered" >                    for_each_branch(<span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if (b.label === attrs.initialSelection) {</span>
+<span class="cstat-no" title="statement not covered" >                            return $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                                return select_branch(b);</span>
+                            });
+                        }
+                    });
+                }
+<span class="cstat-no" title="statement not covered" >                n = scope.treeData.length;</span>
+<span class="cstat-no" title="statement not covered" >                for_each_branch(<span class="fstat-no" title="function not covered" >function (b, level) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    b.level = level;</span>
+<span class="cstat-no" title="statement not covered" >                    b.expanded = b.level &lt; expand_level;</span>
+<span class="cstat-no" title="statement not covered" >                    return b.expanded ;</span>
+                });
+<span class="cstat-no" title="statement not covered" >                if (scope.treeControl ) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (angular.isObject(scope.treeControl)) {</span>
+<span class="cstat-no" title="statement not covered" >                        tree = scope.treeControl;</span>
+<span class="cstat-no" title="statement not covered" >                        tree.expand_all = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return for_each_branch(<span class="fstat-no" title="function not covered" >function (b, level) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                b.expanded = true;</span>
+<span class="cstat-no" title="statement not covered" >                                return b.expanded ;</span>
+                            });
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.collapse_all = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return for_each_branch(<span class="fstat-no" title="function not covered" >function (b, level) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                b.expanded = false;</span>
+<span class="cstat-no" title="statement not covered" >                                return b.expanded ;</span>
+                            });
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_first_branch = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            n = scope.treeData.length;</span>
+<span class="cstat-no" title="statement not covered" >                            if (n &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                return scope.treeData[0];</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_first_branch = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var b;</span>
+<span class="cstat-no" title="statement not covered" >                            b = tree.get_first_branch();</span>
+<span class="cstat-no" title="statement not covered" >                            return tree.select_branch(b);</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_selected_branch = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return selected_branch;</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_parent_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return get_parent(b);</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            select_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                            return b;</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_children = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            return b.children;</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_parent_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var p;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = tree.get_selected_branch();</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                p = tree.get_parent_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (p ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    tree.select_branch(p);</span>
+<span class="cstat-no" title="statement not covered" >                                    return p;</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.add_branch = <span class="fstat-no" title="function not covered" >function (parent, new_branch) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (parent ) {</span>
+<span class="cstat-no" title="statement not covered" >                                parent.children.push(new_branch);</span>
+<span class="cstat-no" title="statement not covered" >                                parent.expanded = true;</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                scope.treeData.push(new_branch);</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            return new_branch;</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.add_root_branch = <span class="fstat-no" title="function not covered" >function (new_branch) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            tree.add_branch(null, new_branch);</span>
+<span class="cstat-no" title="statement not covered" >                            return new_branch;</span>
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.expand_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = tree.get_selected_branch();</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                b.expanded = true;</span>
+<span class="cstat-no" title="statement not covered" >                                return b;</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.collapse_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                b.expanded = false;</span>
+<span class="cstat-no" title="statement not covered" >                                return b;</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_siblings = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var p, siblings;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                p = tree.get_parent_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (p) {</span>
+<span class="cstat-no" title="statement not covered" >                                    siblings = p.children;</span>
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    siblings = scope.treeData;</span>
+                                }
+<span class="cstat-no" title="statement not covered" >                                return siblings;</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_next_sibling = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var i, siblings;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                siblings = tree.get_siblings(b);</span>
+<span class="cstat-no" title="statement not covered" >                                n = siblings.length;</span>
+<span class="cstat-no" title="statement not covered" >                                i = siblings.indexOf(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (i &lt; n) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return siblings[i + 1];</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_prev_sibling = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var i, siblings;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            siblings = tree.get_siblings(b);</span>
+<span class="cstat-no" title="statement not covered" >                            n = siblings.length;</span>
+<span class="cstat-no" title="statement not covered" >                            i = siblings.indexOf(b);</span>
+<span class="cstat-no" title="statement not covered" >                            if (i &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                return siblings[i - 1];</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_next_sibling = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var next;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                next = tree.get_next_sibling(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (next ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return tree.select_branch(next);</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_prev_sibling = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var prev;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                prev = tree.get_prev_sibling(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (prev ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return tree.select_branch(prev);</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_first_child = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var _ref;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                if (((_ref = b.children)  ? _ref.length : void 0) &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return b.children[0];</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_closest_ancestor_next_sibling = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var next, parent;</span>
+<span class="cstat-no" title="statement not covered" >                            next = tree.get_next_sibling(b);</span>
+<span class="cstat-no" title="statement not covered" >                            if (next ) {</span>
+<span class="cstat-no" title="statement not covered" >                                return next;</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                parent = tree.get_parent_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                return tree.get_closest_ancestor_next_sibling(parent);</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_next_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var next;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                next = tree.get_first_child(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (next ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return next;</span>
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    next = tree.get_closest_ancestor_next_sibling(b);</span>
+<span class="cstat-no" title="statement not covered" >                                    return next;</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.select_next_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var next;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                next = tree.get_next_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (next ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    tree.select_branch(next);</span>
+<span class="cstat-no" title="statement not covered" >                                    return next;</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.last_descendant = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var last_child;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                "";</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            n = b.children.length;</span>
+<span class="cstat-no" title="statement not covered" >                            if (n === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                return b;</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                last_child = b.children[n - 1];</span>
+<span class="cstat-no" title="statement not covered" >                                return tree.last_descendant(last_child);</span>
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        tree.get_prev_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var parent, prev_sibling;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                prev_sibling = tree.get_prev_sibling(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (prev_sibling ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    return tree.last_descendant(prev_sibling);</span>
+                                } else {
+<span class="cstat-no" title="statement not covered" >                                    parent = tree.get_parent_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                    return parent;</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                         tree.select_prev_branch = <span class="fstat-no" title="function not covered" >function (b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            var prev;</span>
+<span class="cstat-no" title="statement not covered" >                            if (b === null) {</span>
+<span class="cstat-no" title="statement not covered" >                                b = selected_branch;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            if (b ) {</span>
+<span class="cstat-no" title="statement not covered" >                                prev = tree.get_prev_branch(b);</span>
+<span class="cstat-no" title="statement not covered" >                                if (prev ) {</span>
+<span class="cstat-no" title="statement not covered" >                                    tree.select_branch(prev);</span>
+<span class="cstat-no" title="statement not covered" >                                    return prev;</span>
+                                }
+                            }
+                        };
+<span class="cstat-no" title="statement not covered" >                        return tree.select_prev_branch;</span>
+                    }
+                }
+            }
+        };
+    }
+);
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

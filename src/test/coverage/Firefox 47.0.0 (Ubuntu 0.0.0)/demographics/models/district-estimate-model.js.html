@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for demographics/models/district-estimate-model.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">demographics/models/district-estimate-model.js</span></h1>
+    <h2>
+        Statements: <span class="metric">6.45% <small>(2 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">6.45% <small>(2 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">demographics/models/</a> &#187; district-estimate-model.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function DistrictEstimateModel (){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  DistrictEstimateModel.prototype.getByCategory = <span class="fstat-no" title="function not covered" >function(category, year) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var categoryValue = _.findWhere(this.districtEstimates, {</span>
+      'demographicEstimateId': category.id
+    });
+<span class="cstat-no" title="statement not covered" >    if (angular.isUndefined(categoryValue)) {</span>
+<span class="cstat-no" title="statement not covered" >      var programId = (this.districtEstimates !== undefined &amp;&amp; this.districtEstimates.length &gt; 0)? this.districtEstimates[0].programId: undefined;</span>
+<span class="cstat-no" title="statement not covered" >      categoryValue = {</span>
+        'demographicEstimateId': category.id,
+        'year': year,
+        'programId': programId,
+        'conversionFactor': category.defaultConverstionFactor,
+        'value': 0
+      };
+<span class="cstat-no" title="statement not covered" >      this.districtEstimates.push(categoryValue);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return categoryValue;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  DistrictEstimateModel.prototype.getFacilityAggregateByCategory = <span class="fstat-no" title="function not covered" >function(category, year) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var categoryValue = _.findWhere(this.facilityEstimates, {</span>
+      'demographicEstimateId': category.id
+    });
+<span class="cstat-no" title="statement not covered" >    if (angular.isUndefined(categoryValue)) {</span>
+<span class="cstat-no" title="statement not covered" >      var programId = (this.facilityEstimates !== undefined &amp;&amp; this.facilityEstimates.length &gt; 0)? this.facilityEstimates[0].programId: undefined;</span>
+<span class="cstat-no" title="statement not covered" >      categoryValue = {</span>
+        'demographicEstimateId': category.id,
+        'year': year,
+        'programId': programId,
+        'conversionFactor': category.defaultConverstionFactor,
+        'value': 0
+      };
+<span class="cstat-no" title="statement not covered" >      this.facilityEstimates.push(categoryValue);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return categoryValue;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  DistrictEstimateModel.prototype.populationChanged = <span class="fstat-no" title="function not covered" >function(autoCalculate) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (autoCalculate) {</span>
+<span class="cstat-no" title="statement not covered" >      var population = _.findWhere(this.districtEstimates, {</span>
+        'demographicEstimateId': 1
+      });
+<span class="cstat-no" title="statement not covered" >      var pop =  Number(population.value);</span>
+<span class="cstat-no" title="statement not covered" >      angular.forEach(this.districtEstimates, <span class="fstat-no" title="function not covered" >function(estimate) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (population.demographicEstimateId !== estimate.demographicEstimateId) {</span>
+<span class="cstat-no" title="statement not covered" >          estimate.value = Math.round(estimate.conversionFactor * pop / 100);</span>
+        }
+      });
+    }
+  };
+&nbsp;
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function AggregateRegionEstimateModel( districtList ){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.indexedList = _.groupBy(districtList, 'parentId');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  AggregateRegionEstimateModel.prototype.getSummary = <span class="fstat-no" title="function not covered" >function(region, category, year){</span></span>
+<span class="cstat-no" title="statement not covered" >    var districts = this.indexedList[region];</span>
+<span class="cstat-no" title="statement not covered" >    var sum = 0;</span>
+<span class="cstat-no" title="statement not covered" >    angular.forEach(districts, <span class="fstat-no" title="function not covered" >function(district){</span></span>
+<span class="cstat-no" title="statement not covered" >      var val = district.getByCategory(category, year);</span>
+<span class="cstat-no" title="statement not covered" >      sum = sum + Number(val.value);</span>
+    });
+<span class="cstat-no" title="statement not covered" >    return sum;</span>
+  };
+&nbsp;
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

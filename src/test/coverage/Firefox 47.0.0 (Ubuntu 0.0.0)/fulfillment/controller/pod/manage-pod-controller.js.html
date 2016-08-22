@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for fulfillment/controller/pod/manage-pod-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">fulfillment/controller/pod/manage-pod-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4% <small>(1 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4% <small>(1 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">fulfillment/controller/pod/</a> &#187; manage-pod-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function ManagePODController($scope, OrdersForManagePOD, messageService, OrderPOD, CreateRequisitionProgramList, UserSupervisedFacilitiesForProgram, $location) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.option = {all: false};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  CreateRequisitionProgramList.get(<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.programs = data.programList;</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.onParamChanged = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.orders = [];</span>
+<span class="cstat-no" title="statement not covered" >    if(!angular.isUndefined($scope.filter.program) &amp;&amp; $scope.filter.program !== null){</span>
+<span class="cstat-no" title="statement not covered" >      UserSupervisedFacilitiesForProgram.get({programId: $scope.filter.program}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.facilities = data.facilities;</span>
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if($scope.option.all){</span>
+<span class="cstat-no" title="statement not covered" >        OrdersForManagePOD.get({program: $scope.filter.program}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >          $scope.orders = data.ordersForPOD;</span>
+        });
+      } else {
+<span class="cstat-no" title="statement not covered" >        OrdersForManagePOD.get({program: $scope.filter.program, facility: $scope.filter.facility}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >          $scope.orders = data.ordersForPOD;</span>
+        });
+      }
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.onFacilityChanged = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.orders = [];</span>
+<span class="cstat-no" title="statement not covered" >    OrdersForManagePOD.get({program: $scope.filter.program, facility: $scope.filter.facility}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.orders = data.ordersForPOD;</span>
+    });
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.gridOptions = { data: 'orders',</span>
+    showFooter: false,
+    showColumnMenu: false,
+    showFilter: false,
+    enableColumnResize: true,
+    enableSorting: false,
+    afterSelectionChange: <span class="fstat-no" title="function not covered" >function (rowItem) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.createPOD(rowItem.entity.id);</span>
+    },
+    columnDefs: [
+      {field: 'orderNumber', displayName: messageService.get("label.order.no"), width: 70, cellTemplate: "&lt;div class='ngCellText'&gt;&lt;span id = 'order{{row.rowIndex}}' class='orderNumber'&gt;{{row.entity.orderNumber}}&lt;/span&gt;&lt;/div&gt;"},
+      {field: 'supplyLine.supplyingFacility.name', displayName: messageService.get("label.supplying.depot")},
+      {field: 'facilityCode', displayName: messageService.get("label.facility.code.name"), cellTemplate: "&lt;div class='ngCellText'&gt;&lt;span ng-cell-text&gt;{{row.entity.rnr.facilityCode}} - {{row.entity.rnr.facilityName}}&lt;/span&gt;&lt;/div&gt;"},
+      {field: 'rnr.programName', displayName: messageService.get("label.program"), cellTemplate: "&lt;div class='ngCellText'&gt;&lt;span id = 'program{{row.rowIndex}}'&gt;{{row.entity.rnr.programName}}&lt;/span&gt;&lt;/div&gt;"},
+      {field: 'periodName', displayName: messageService.get("label.period"), cellTemplate: "&lt;div class='ngCellText'&gt;&lt;span ng-cell-text&gt;{{row.entity.rnr.periodName}} ({{row.entity.rnr.stringPeriodStartDate}} - {{row.entity.rnr.stringPeriodEndDate}})&lt;/span&gt;&lt;/div&gt;"},
+      {field: 'stringCreatedDate', displayName: messageService.get("label.order.date.time")},
+      {field: 'status', displayName: messageService.get("label.order.status"),
+        cellTemplate: "&lt;div class='ngCellText'&gt;&lt;span ng-cell-text ng-bind=\"getStatus(row.entity.status)\"&gt;&lt;/span&gt;&lt;/div&gt; "},
+      {field: 'emergency', displayName: messageService.get("requisition.type.emergency"),
+        cellTemplate: '&lt;div class="ngCellText checked"&gt;&lt;i ng-class="{\'icon-ok\': row.entity.rnr.emergency}"&gt;&lt;/i&gt;&lt;/div&gt;',
+        width: 90 },
+      {cellTemplate: "&lt;div class='ngCellText'&gt;&lt;a href='' id='updatePod{{row.rowIndex}}' openlmis-message='link.update.pod'&gt;&lt;/a&gt;&lt;/div&gt;", width: 180}
+    ]
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.createPOD = <span class="fstat-no" title="function not covered" >function (orderId) {</span></span>
+<span class="cstat-no" title="statement not covered" >    OrderPOD.save({orderId: orderId}, {}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $location.url('/pods/' + data.orderPOD.id + '?page=1');</span>
+    }, {});
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getStatus = <span class="fstat-no" title="function not covered" >function (status) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return messageService.get("label.order." + status);</span>
+  };
+&nbsp;
+}</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

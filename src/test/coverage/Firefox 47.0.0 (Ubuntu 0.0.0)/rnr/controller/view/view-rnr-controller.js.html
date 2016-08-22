@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for rnr/controller/view/view-rnr-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">rnr/controller/view/view-rnr-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">36.51% <small>(23 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">58.33% <small>(7 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">14.29% <small>(4 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">36.51% <small>(23 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">rnr/controller/view/</a> &#187; view-rnr-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">78</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+function ViewRnrController($scope, requisitionData , rnrColumns, regimenTemplate, equipmentOperationalStatus, ReOpenRequisition, RejectRequisition , $dialog , $location, pageSize, $routeParams, requisitionService) {
+&nbsp;
+  $scope.rnrColumns = rnrColumns;
+  $scope.pageSize = pageSize;
+  $scope.rnr = new Rnr(requisitionData.rnr, rnrColumns, requisitionData.numberOfMonths);
+  $scope.regimenColumns = regimenTemplate ? regimenTemplate.columns : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+&nbsp;
+  if (!($scope.rnr.status == "APPROVED" || $scope.rnr.status == "RELEASED")) {
+    rnrColumns = _.filter(rnrColumns, function (column) {
+      return column.name != "quantityApproved";
+    });
+  }
+&nbsp;
+  $scope.reOpenRnR = <span class="fstat-no" title="function not covered" >function( ){</span>
+<span class="cstat-no" title="statement not covered" >    var callBack = <span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (result) {</span>
+<span class="cstat-no" title="statement not covered" >        ReOpenRequisition.post({id: $scope.rnr.id}, <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >          OpenLmisDialog.newDialog({</span>
+            id: "confirmDialog",
+            header: "label.confirm.action",
+            body: 'msg.rnr.reopened'
+          }, <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >            $location.url('/public/pages/logistics/rnr/index.html#/init-rnr');</span>
+          }, $dialog);
+        });
+      }
+    };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var options = {</span>
+      id: "confirmDialog",
+      header: "label.confirm.action",
+      body: "label.rnr.confirm.reopen"
+    };
+<span class="cstat-no" title="statement not covered" >    OpenLmisDialog.newDialog(options, callBack, $dialog);</span>
+  };
+&nbsp;
+  $scope.rejectRnR = <span class="fstat-no" title="function not covered" >function( ){</span>
+<span class="cstat-no" title="statement not covered" >    var callBack = <span class="fstat-no" title="function not covered" >function (result) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (result) {</span>
+<span class="cstat-no" title="statement not covered" >        RejectRequisition.post({id: $scope.rnr.id}, <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >          OpenLmisDialog.newDialog({</span>
+            id: "confirmDialog",
+            header: "label.confirm.action",
+            body: 'msg.rnr.returned'
+          }, <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >            $location.url('/public/pages/logistics/rnr/index.html#/init-rnr');</span>
+          }, $dialog);
+        });
+      }
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var options = {</span>
+      id: "confirmDialog",
+      header: "label.confirm.action",
+      body: "label.rnr.confirm.return"
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    OpenLmisDialog.newDialog(options, callBack, $dialog);</span>
+  };
+&nbsp;
+  $scope.visibleColumns = requisitionService.getMappedVisibleColumns(rnrColumns, RegularRnrLineItem.frozenColumns, []);
+  $scope.regimenCount = $scope.rnr.regimenLineItems.length;
+  $scope.equipmentCount = $scope.rnr.equipmentLineItems.length;
+&nbsp;
+  $scope.equipmentOperationalStatus = equipmentOperationalStatus;
+&nbsp;
+  requisitionService.populateScope($scope, $location, $routeParams);
+&nbsp;
+  $scope.requisitionType = $scope.rnr.emergency ? "requisition.type.emergency" : "requisition.type.regular";
+&nbsp;
+  $scope.$on('$routeUpdate', function () {
+    requisitionService.refreshGrid($scope, $location, $routeParams, false);
+  });
+&nbsp;
+  requisitionService.refreshGrid($scope, $location, $routeParams, false);
+&nbsp;
+  $scope.$watch("currentPage", function () {
+    $location.search("page", $scope.currentPage);
+  });
+&nbsp;
+  $scope.getId = <span class="fstat-no" title="function not covered" >function (prefix, parent) {</span>
+<span class="cstat-no" title="statement not covered" >    return prefix + "_" + parent.$parent.$index;</span>
+  };
+}
+&nbsp;
+ViewRnrController.resolve = {
+&nbsp;
+  requisitionData: <span class="fstat-no" title="function not covered" >function ($q, $timeout, Requisitions, $route) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >    $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      Requisitions.get({id: $route.current.params.rnr}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(data);</span>
+      }, {});
+    }, 100);
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  },
+&nbsp;
+  rnrColumns: <span class="fstat-no" title="function not covered" >function ($q, $timeout, ProgramRnRColumnList, $route) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >    $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      ProgramRnRColumnList.get({programId: $route.current.params.program}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(data.rnrColumnList);</span>
+      }, {});
+    }, 100);
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  },
+&nbsp;
+  pageSize: <span class="fstat-no" title="function not covered" >function ($q, $timeout, LineItemsPerPage) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >    $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      LineItemsPerPage.get({}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(data.pageSize);</span>
+      }, {});
+    }, 100);
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  },
+  equipmentOperationalStatus: <span class="fstat-no" title="function not covered" >function ($q, $timeout, EquipmentOperationalStatus) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >    $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      EquipmentOperationalStatus.get({}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(data.status);</span>
+      }, {});
+    }, 100);
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  },
+  regimenTemplate: <span class="fstat-no" title="function not covered" >function ($q, $timeout, $route, ProgramRegimenTemplate) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >    $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      ProgramRegimenTemplate.get({programId: $route.current.params.program}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        deferred.resolve(data.template);</span>
+      }, {});
+    }, 100);
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 22 2016 17:38:32 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

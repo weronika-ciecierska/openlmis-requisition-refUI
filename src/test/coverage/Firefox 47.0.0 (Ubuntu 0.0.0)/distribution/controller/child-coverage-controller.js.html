@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for distribution/controller/child-coverage-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">distribution/controller/child-coverage-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.13% <small>(1 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 21)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.13% <small>(1 / 47)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">distribution/controller/</a> &#187; child-coverage-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ *  This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *  You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org.
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function ChildCoverageController($scope, $routeParams, distributionService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.distribution = distributionService.distribution;</span>
+<span class="cstat-no" title="statement not covered" >  $scope.selectedFacilityId = $routeParams.facility;</span>
+<span class="cstat-no" title="statement not covered" >  $scope.childCoverage = $scope.distribution.facilityDistributions[$scope.selectedFacilityId].childCoverage;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var getValue = <span class="fstat-no" title="function not covered" >function (obj) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return (!isUndefined(obj)) ? ((!isUndefined(obj.value)) ? parseInt(obj.value, 10) : 0) : 0;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var syncNR = <span class="fstat-no" title="function not covered" >function (product1, product2) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!isUndefined($scope.openedVialMap[product2].openedVial) &amp;&amp; !isUndefined($scope.openedVialMap[product1].openedVial))</span>
+<span class="cstat-no" title="statement not covered" >      $scope.openedVialMap[product1].openedVial.notRecorded = $scope.openedVialMap[product2].openedVial.notRecorded;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var convertListToMap = <span class="fstat-no" title="function not covered" >function (list, key) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var map = {};</span>
+<span class="cstat-no" title="statement not covered" >    list.forEach(<span class="fstat-no" title="function not covered" >function (lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >      map[lineItem[key]] = lineItem;</span>
+    });
+<span class="cstat-no" title="statement not covered" >    return map;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.childCoverageMap = convertListToMap($scope.childCoverage.childCoverageLineItems, 'vaccination');</span>
+<span class="cstat-no" title="statement not covered" >  $scope.openedVialMap = convertListToMap($scope.childCoverage.openedVialLineItems, 'productVialName');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.columns = {</span>
+    vaccination: "label.child.vaccination.doses",
+    targetGroup: "label.coverage.target.Group",
+    childrenAgeGroup0To11: "label.children.age.group.zero.eleven.months",
+    childrenAgeGroup12To23: "label.children.age.group.twelve.twenty.three.months",
+    categoryOneHealthCenter: "label.coverage.health.center",
+    categoryOneMobileBrigade: "label.coverage.outreach",
+    categoryOneTotal: "label.child.coverage.first.total",
+    coverageRate: "label.coverage.rate",
+    categoryTwoHealthCenter: "label.coverage.health.center",
+    categoryTwoMobileBrigade: "label.coverage.outreach",
+    categoryTwoTotal: "label.child.coverage.first.total",
+    totalVaccination: "label.child.coverage.total.vaccination",
+    openedVials: "label.coverage.opened.vials",
+    openedVialsWastageRate: "label.coverage.opened.vials.wastage.rate"
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.productsMap = {</span>
+    "BCG": {
+      products: ['BCG'],
+      vaccinations: ['BCG'],
+      rowSpan: 1
+    },
+    "Polio (Newborn)": {
+      products: ['Polio10', 'Polio20'],
+      vaccinations: ['Polio (Newborn)', 'Polio 1st dose', 'Polio 2nd dose', 'Polio 3rd dose'],
+      rowSpan: 4
+    },
+    "Penta 1st dose": {
+      products: ['Penta1', 'Penta10'],
+      vaccinations: ['Penta 1st dose', 'Penta 2nd dose', 'Penta 3rd dose'],
+      rowSpan: 3
+    },
+    "PCV10 1st dose": {
+      products: ['PCV'],
+      vaccinations: ['PCV10 1st dose', 'PCV10 2nd dose', 'PCV10 3rd dose'],
+      rowSpan: 3
+    },
+    "Measles": {
+      products: ['Measles'],
+      vaccinations: ['Measles'],
+      rowSpan: 1
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.hideCell = <span class="fstat-no" title="function not covered" >function (vaccination) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return Object.keys($scope.productsMap).indexOf(vaccination) === -1;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.$watch("openedVialMap['Polio20'].openedVial.notRecorded", <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    syncNR('Polio10', 'Polio20');</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.$watch("openedVialMap['Penta10'].openedVial.notRecorded", <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    syncNR('Penta1', 'Penta10');</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getTotal = <span class="fstat-no" title="function not covered" >function (obj1, obj2) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return getValue(obj1) + getValue(obj2);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getTotalVaccinations = <span class="fstat-no" title="function not covered" >function (childCoverageLineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return $scope.getTotal(childCoverageLineItem.healthCenter11Months, childCoverageLineItem.outreach11Months) +</span>
+      $scope.getTotal(childCoverageLineItem.healthCenter23Months, childCoverageLineItem.outreach23Months);
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.calculateCoverageRate = <span class="fstat-no" title="function not covered" >function (total, targetGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return (isUndefined(targetGroup) ? null : (targetGroup === 0 ? null : Math.round((total / targetGroup) * 100)));</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getFormattedAsPercent = <span class="fstat-no" title="function not covered" >function (number) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return utils.getFormattedPercent(number);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.calculateWastageRate = <span class="fstat-no" title="function not covered" >function (productsForVaccination) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var totalDosesConsumed = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var totalVaccinations = 0;</span>
+<span class="cstat-no" title="statement not covered" >    if (!isUndefined(productsForVaccination)) {</span>
+<span class="cstat-no" title="statement not covered" >      $.each(productsForVaccination.products, <span class="fstat-no" title="function not covered" >function (index, product) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var openedVialLineItem = $scope.openedVialMap[product];</span>
+<span class="cstat-no" title="statement not covered" >        if (!isUndefined(openedVialLineItem.packSize) &amp;&amp; !isUndefined(openedVialLineItem.openedVial) &amp;&amp; !isUndefined(openedVialLineItem.openedVial.value)) {</span>
+<span class="cstat-no" title="statement not covered" >          totalDosesConsumed += openedVialLineItem.packSize * openedVialLineItem.openedVial.value;</span>
+        }
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $.each(productsForVaccination.vaccinations, <span class="fstat-no" title="function not covered" >function (index, vaccination) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var childCoverageLineItem = $scope.childCoverageMap[vaccination];</span>
+<span class="cstat-no" title="statement not covered" >        totalVaccinations += $scope.getTotalVaccinations(childCoverageLineItem);</span>
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    return totalDosesConsumed === 0 ? null : Math.round(((totalDosesConsumed - totalVaccinations) / totalDosesConsumed) * 100);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.applyNRAll = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    distributionService.applyNR(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.childCoverage.setNotRecorded();</span>
+    });
+  };
+}</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

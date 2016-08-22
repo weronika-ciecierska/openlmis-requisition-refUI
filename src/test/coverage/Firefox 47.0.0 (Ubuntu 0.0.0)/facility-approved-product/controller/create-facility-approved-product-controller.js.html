@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for facility-approved-product/controller/create-facility-approved-product-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">facility-approved-product/controller/create-facility-approved-product-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.41% <small>(2 / 83)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.47% <small>(2 / 81)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">facility-approved-product/controller/</a> &#187; create-facility-approved-product-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org.
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function CreateFacilityApprovedProductController($scope, FacilityTypeApprovedProducts, messageService) {</span>
+<span class="cstat-no" title="statement not covered" >  $scope.addedFacilityTypeApprovedProducts = [];</span>
+<span class="cstat-no" title="statement not covered" >  $scope.selectedProgramProductList = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var fillFacilityTypeApprovedProduct = <span class="fstat-no" title="function not covered" >function (selectedProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      "facilityType": $scope.$parent.$parent.facilityType,
+      "programProduct": {"program": $scope.$parent.$parent.program, "product": selectedProduct, "productCategory": $scope.productCategorySelected},
+      "maxMonthsOfStock": $scope.newFacilityTypeApprovedProduct.maxMonthsOfStock,
+      "minMonthsOfStock": $scope.newFacilityTypeApprovedProduct.minMonthsOfStock,
+      "eop": $scope.newFacilityTypeApprovedProduct.eop
+    };
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var clearFacilityApprovedProductModalData = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.productCategorySelected = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.productSelected = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.products = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.newFacilityTypeApprovedProduct = undefined;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var addAndRemoveFromProgramProductList = <span class="fstat-no" title="function not covered" >function (listToBeFiltered, listToBeAdded, value) {</span></span>
+<span class="cstat-no" title="statement not covered" >    listToBeAdded.push(_.find(listToBeFiltered, <span class="fstat-no" title="function not covered" >function (programProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return  programProduct.product.code == value;</span>
+    }));
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    listToBeFiltered = _.reject(listToBeFiltered, <span class="fstat-no" title="function not covered" >function (programProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return  programProduct.product.code == value;</span>
+    });
+<span class="cstat-no" title="statement not covered" >    return listToBeFiltered;</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var filterProductsToDisplay = <span class="fstat-no" title="function not covered" >function (selectedProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.$parent.$parent.programProductList = addAndRemoveFromProgramProductList($scope.programProductList, $scope.selectedProgramProductList, selectedProduct.code);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getHeader = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    return messageService.get('header.code') + " | " +</span>
+      messageService.get('header.name') + " | " +
+      messageService.get('header.strength') + " | " +
+      messageService.get('header.unit.of.measure') + " | " +
+      messageService.get('header.template.type');
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.formatResult = <span class="fstat-no" title="function not covered" >function (product) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!product) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >    var productData = product.text.split("|");</span>
+<span class="cstat-no" title="statement not covered" >    var productType = productData[4].trim();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (productType.toLowerCase() === "true") {</span>
+<span class="cstat-no" title="statement not covered" >      productType = messageService.get('label.full.supply');</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (productType.toLowerCase() === "false") {</span>
+<span class="cstat-no" title="statement not covered" >      productType = messageService.get('label.non.full.supply');</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return "&lt;div class='row-fluid'&gt;" +</span>
+      "&lt;div class='span2'&gt;" + productData[0] + "&lt;/div&gt;" +
+      "&lt;div class='span4'&gt;" + productData[1] + "&lt;/div&gt;" +
+      "&lt;div class='span2'&gt;" + productData[2] + "&lt;/div&gt;" +
+      "&lt;div class='span2'&gt;" + productData[3] + "&lt;/div&gt;" +
+      "&lt;div class='span2'&gt;" + productType + "&lt;/div&gt;" +
+      "&lt;/div&gt;";
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.formatSelection = <span class="fstat-no" title="function not covered" >function (product) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!product) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >    var productData = product.text.split("|");</span>
+<span class="cstat-no" title="statement not covered" >    return productData[0] + " - " + productData[1];</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.filterProductsByCategory = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    var filteredProducts = _.filter($scope.programProductList, <span class="fstat-no" title="function not covered" >function (programProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return programProduct.productCategory.code === $scope.productCategorySelected.code;</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.products = _.pluck(filteredProducts, "product");</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.isAddDisabled = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    return !($scope.newFacilityTypeApprovedProduct &amp;&amp; $scope.newFacilityTypeApprovedProduct.maxMonthsOfStock &amp;&amp;</span>
+      $scope.productCategorySelected &amp;&amp; $scope.productSelected);
+  };
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function sortByCategory(facilityTypeApprovedProducts) {</span>
+<span class="cstat-no" title="statement not covered" >    return _(facilityTypeApprovedProducts).chain().sortBy(<span class="fstat-no" title="function not covered" >function (facilityApprovedProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return facilityApprovedProduct.programProduct.product.code.toLowerCase();</span>
+    }).sortBy(<span class="fstat-no" title="function not covered" >function (facilityApprovedProduct) {</span>
+<span class="cstat-no" title="statement not covered" >      return facilityApprovedProduct.programProduct.productCategory.name.toLowerCase();</span>
+    }).value();
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.addFacilityTypeApprovedProduct = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    var selectedProduct = $.parseJSON($scope.productSelected);</span>
+<span class="cstat-no" title="statement not covered" >    var facilityApprovedProgramProduct = fillFacilityTypeApprovedProduct(selectedProduct);</span>
+<span class="cstat-no" title="statement not covered" >    $scope.addedFacilityTypeApprovedProducts.push(facilityApprovedProgramProduct);</span>
+<span class="cstat-no" title="statement not covered" >    $scope.addedFacilityTypeApprovedProducts = sortByCategory($scope.addedFacilityTypeApprovedProducts);</span>
+<span class="cstat-no" title="statement not covered" >    filterProductsToDisplay(selectedProduct);</span>
+<span class="cstat-no" title="statement not covered" >    clearFacilityApprovedProductModalData();</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.removeFacilityTypeApprovedProduct = <span class="fstat-no" title="function not covered" >function (index) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var removedFTAProduct = $scope.addedFacilityTypeApprovedProducts[index];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.addedFacilityTypeApprovedProducts.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered" >    $scope.selectedProgramProductList = addAndRemoveFromProgramProductList($scope.selectedProgramProductList, $scope.programProductList, removedFTAProduct.programProduct.product.code);</span>
+<span class="cstat-no" title="statement not covered" >    clearFacilityApprovedProductModalData();</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.addFacilityTypeApprovedProducts = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    if ($scope.addedFacilityTypeApprovedProducts &amp;&amp; $scope.addedFacilityTypeApprovedProducts.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      var invalid = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      _.each($scope.addedFacilityTypeApprovedProducts, <span class="fstat-no" title="function not covered" >function (facilityTypeApprovedProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (isUndefined(facilityTypeApprovedProduct.maxMonthsOfStock) || isUndefined(facilityTypeApprovedProduct.facilityType) || isUndefined(facilityTypeApprovedProduct.programProduct)) {</span>
+<span class="cstat-no" title="statement not covered" >          invalid = true;</span>
+<span class="cstat-no" title="statement not covered" >          return false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+      });
+<span class="cstat-no" title="statement not covered" >      if (invalid) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.modalError = 'error.correct.highlighted';</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      $scope.modalError = undefined;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      FacilityTypeApprovedProducts.save({}, $scope.addedFacilityTypeApprovedProducts, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.$parent.$parent.message = data.success;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.$parent.$parent.facilityApprovedProductsModal = false;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.$parent.$parent.loadProducts(1);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.addedFacilityTypeApprovedProducts = [];</span>
+<span class="cstat-no" title="statement not covered" >        clearFacilityApprovedProductModalData();</span>
+      }, <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.$parent.$parent.message = undefined;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.modalError = data.data.error;</span>
+      });
+<span class="cstat-no" title="statement not covered" >      $scope.$parent.$parent.focusSuccessMessageDiv();</span>
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.cancelFacilityTypeApprovedProducts = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.$parent.$parent.facilityApprovedProductsModal = false;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.addedFacilityTypeApprovedProducts = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.$parent.$parent.message = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    clearFacilityApprovedProductModalData();</span>
+  };
+}</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

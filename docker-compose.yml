@@ -1,0 +1,7 @@
+version: "2"
+services:
+  requisition-refui:
+    image: openlmis/requisition-refui
+    volumes:
+      - '.:/app'
+    env_file: .env

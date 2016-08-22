@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dashboard/shared/resolve/dashboard-form-data-resolve.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">dashboard/shared/resolve/dashboard-form-data-resolve.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4% <small>(1 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4% <small>(1 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">dashboard/shared/resolve/</a> &#187; dashboard-form-data-resolve.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+ResolveDashboardFormData = {
+    programsList : <span class="fstat-no" title="function not covered" >function($q, $timeout, $rootScope, UserSupervisedActivePrograms){</span>
+<span class="cstat-no" title="statement not covered" >        var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            UserSupervisedActivePrograms.get(<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                deferred.resolve(data.programs);</span>
+&nbsp;
+            });
+&nbsp;
+        },100);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return deferred.promise;</span>
+&nbsp;
+    },
+    formInputValue : <span class="fstat-no" title="function not covered" >function(messageService){</span>
+<span class="cstat-no" title="statement not covered" >               return {</span>
+                yearOptionAll : messageService.get('input.year.option.all'),
+                programOptionSelect : messageService.get('input.program.option.select'),
+                scheduleOptionSelect : messageService.get('input.schedule.option.select'),
+                geographicZoneNational : messageService.get('input.geographic.zone.national'),
+                facilityOptionSelect : messageService.get('input.facility.option.select'),
+                periodOptionSelect : messageService.get('input.period.option.select')
+            };
+    },
+    userPreferredFilters : <span class="fstat-no" title="function not covered" >function(GetPeriod,localStorageService){</span>
+<span class="cstat-no" title="statement not covered" >        var date = new Date();</span>
+<span class="cstat-no" title="statement not covered" >        var filterObject = {};</span>
+<span class="cstat-no" title="statement not covered" >        var preferredFilterValues = {};</span>
+<span class="cstat-no" title="statement not covered" >        for(var prefKey in localStorageKeys.PREFERENCE){</span>
+<span class="cstat-no" title="statement not covered" >            preferredFilterValues[localStorageKeys.PREFERENCE[prefKey]] =  localStorageService.get(localStorageKeys.PREFERENCE[prefKey]);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        filterObject.programId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_PROGRAM];</span>
+<span class="cstat-no" title="statement not covered" >        filterObject.periodId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_PERIOD];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined(filterObject.periodId)){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            GetPeriod.get({id:filterObject.periodId}, <span class="fstat-no" title="function not covered" >function(period){</span></span>
+<span class="cstat-no" title="statement not covered" >                if(!isUndefined(period.year)){</span>
+<span class="cstat-no" title="statement not covered" >                    filterObject.year = period.year;</span>
+                }else{
+<span class="cstat-no" title="statement not covered" >                    filterObject.year = date.getFullYear() - 1;</span>
+                }
+            });
+        }
+<span class="cstat-no" title="statement not covered" >        filterObject.scheduleId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_SCHEDULE];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        filterObject.zoneId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_GEOGRAPHIC_ZONE];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        filterObject.productIdList = !isUndefined(preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_PRODUCTS]) ? preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_PRODUCTS].split(',') : null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        filterObject.facilityId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_FACILITY];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        filterObject.facilityId = preferredFilterValues[localStorageKeys.PREFERENCE.DEFAULT_FACILITY];</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return filterObject;</span>
+    }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for role/controller/role-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">role/controller/role-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">4.9% <small>(5 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">4.95% <small>(5 / 101)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">role/controller/</a> &#187; role-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function RoleController($scope, $routeParams, $location, Roles, Rights, $dialog) {</span>
+<span class="cstat-no" title="statement not covered" >  $scope.$parent.error = "";</span>
+<span class="cstat-no" title="statement not covered" >  $scope.$parent.message = "";</span>
+<span class="cstat-no" title="statement not covered" >  $scope.role = {rights: []};</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function getRole() {</span>
+<span class="cstat-no" title="statement not covered" >    if ($routeParams.id) {</span>
+<span class="cstat-no" title="statement not covered" >      Roles.get({id: $routeParams.id}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.role = data.role;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.currentRightType = data.right_type;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.previousRightType = $scope.currentRightType;</span>
+<span class="cstat-no" title="statement not covered" >        if ($scope.role.rights) {</span>
+<span class="cstat-no" title="statement not covered" >          _.each($scope.rights, <span class="fstat-no" title="function not covered" >function (right) {</span></span>
+<span class="cstat-no" title="statement not covered" >            _.find($scope.role.rights, <span class="fstat-no" title="function not covered" >function (role_right) {</span></span>
+<span class="cstat-no" title="statement not covered" >              if (role_right.name === right.name) {</span>
+<span class="cstat-no" title="statement not covered" >                right.selected = true;</span>
+              }
+            });
+          });
+        }
+      });
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      $scope.currentRightType = "ADMIN";</span>
+<span class="cstat-no" title="statement not covered" >      $scope.previousRightType = $scope.currentRightType;</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  Rights.get({}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.rights = data.rights;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.adminRights = _.where($scope.rights, {"type": "ADMIN"});</span>
+<span class="cstat-no" title="statement not covered" >    $scope.requisitionRights = _.where($scope.rights, {"type": "REQUISITION"});</span>
+<span class="cstat-no" title="statement not covered" >    $scope.allocationRights = _.where($scope.rights, {"type": "ALLOCATION"});</span>
+<span class="cstat-no" title="statement not covered" >    $scope.fulfillmentRights = _.where($scope.rights, {"type": "FULFILLMENT"});</span>
+<span class="cstat-no" title="statement not covered" >    $scope.reportingRights = _.where($scope.rights, {"type": "REPORTING"});</span>
+<span class="cstat-no" title="statement not covered" >    $scope.reportRights = _.where($scope.rights, {"type": "REPORT"});</span>
+<span class="cstat-no" title="statement not covered" >    getRole();</span>
+  }, {});
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function resetSelected() {</span>
+<span class="cstat-no" title="statement not covered" >    _.each($scope.rights, <span class="fstat-no" title="function not covered" >function (right) {</span></span>
+<span class="cstat-no" title="statement not covered" >      right.selected = false;</span>
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function addDefaultRight(defaultRightName) {</span>
+<span class="cstat-no" title="statement not covered" >    var rightExists = _.find($scope.role.rights, <span class="fstat-no" title="function not covered" >function (role_right) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return role_right.name === defaultRightName;</span>
+    });
+<span class="cstat-no" title="statement not covered" >    if (rightExists) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >    var defaultRight = $scope.getRightFromRightList(defaultRightName);</span>
+<span class="cstat-no" title="statement not covered" >    defaultRight.selected = true;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.role.rights.push(defaultRight);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.updateRights = <span class="fstat-no" title="function not covered" >function (right) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.showRightError = false;</span>
+<span class="cstat-no" title="statement not covered" >    right.selected = !right.selected;</span>
+<span class="cstat-no" title="statement not covered" >    if (right.selected) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.role.rights.push(right);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (right.name == 'CREATE_REQUISITION' || right.name == 'AUTHORIZE_REQUISITION' || right.name == 'APPROVE_REQUISITION') {</span>
+<span class="cstat-no" title="statement not covered" >        addDefaultRight("VIEW_REQUISITION");</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (right.name == 'CONVERT_TO_ORDER' || right.name == 'MANAGE_POD' || right.name == 'FACILITY_FILL_SHIPMENT') {</span>
+<span class="cstat-no" title="statement not covered" >        addDefaultRight("VIEW_ORDER");</span>
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      $scope.role.rights = _.filter($scope.role.rights, <span class="fstat-no" title="function not covered" >function (rightObj) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return (rightObj.name != right.name);</span>
+      });
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.getRightFromRightList = <span class="fstat-no" title="function not covered" >function (rightName) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return _.find($scope.rights, <span class="fstat-no" title="function not covered" >function (right) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return right.name == rightName;</span>
+    });
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.areRelatedFieldsSelected = <span class="fstat-no" title="function not covered" >function (right) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (right.name == 'VIEW_REQUISITION') {</span>
+<span class="cstat-no" title="statement not covered" >      return (contains('CREATE_REQUISITION') ||</span>
+        contains('AUTHORIZE_REQUISITION') ||
+        contains('APPROVE_REQUISITION'));
+    }
+<span class="cstat-no" title="statement not covered" >    if (right.name == 'VIEW_ORDER') {</span>
+<span class="cstat-no" title="statement not covered" >      return (contains('CONVERT_TO_ORDER') ||</span>
+        contains('MANAGE_POD') ||
+        contains('FACILITY_FILL_SHIPMENT'));
+    }
+  };
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function contains(right) {</span>
+<span class="cstat-no" title="statement not covered" >    var containFlag = false;</span>
+<span class="cstat-no" title="statement not covered" >    $($scope.role.rights).each(<span class="fstat-no" title="function not covered" >function (index, assignedRight) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (assignedRight.name == right) {</span>
+<span class="cstat-no" title="statement not covered" >        containFlag = true;</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+      }
+    });
+<span class="cstat-no" title="statement not covered" >    return containFlag;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.saveRole = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    var errorHandler = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.error = data.data.error;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.message = "";</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var successHandler = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $scope.$parent.message = data.success;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.$parent.$error = "";</span>
+<span class="cstat-no" title="statement not covered" >      $location.path('list');</span>
+    };
+<span class="cstat-no" title="statement not covered" >    if (validRole()) {</span>
+<span class="cstat-no" title="statement not covered" >      var id = $routeParams.id;</span>
+<span class="cstat-no" title="statement not covered" >      if (id) {</span>
+<span class="cstat-no" title="statement not covered" >        Roles.update({id: id}, $scope.role, successHandler, errorHandler);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        Roles.save({}, $scope.role, successHandler, errorHandler);</span>
+      }
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.dialogCloseCallback = <span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (result) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.role.rights = [];</span>
+<span class="cstat-no" title="statement not covered" >      resetSelected();</span>
+<span class="cstat-no" title="statement not covered" >      $scope.previousRightType = $scope.currentRightType;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      $scope.currentRightType = $scope.previousRightType;</span>
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.showRoleTypeModal = <span class="fstat-no" title="function not covered" >function (selectedRoleType) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (selectedRoleType !== $scope.previousRightType) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.currentRightType = selectedRoleType;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.showRightError = false;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.error = "";</span>
+<span class="cstat-no" title="statement not covered" >      var options = {</span>
+        id: "roleTypeDialog",
+        header: "header.change.roleType",
+        body: "confirm.roleType.change"
+      };
+<span class="cstat-no" title="statement not covered" >      OpenLmisDialog.newDialog(options, $scope.dialogCloseCallback, $dialog);</span>
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var validRole = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    var valid = true;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.error = "";</span>
+<span class="cstat-no" title="statement not covered" >    $scope.showRightError = false;</span>
+<span class="cstat-no" title="statement not covered" >    if ($scope.role.name === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.showError = true;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.error = "form.error";</span>
+<span class="cstat-no" title="statement not covered" >      valid = false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if ($scope.role.rights.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.showRightError = true;</span>
+<span class="cstat-no" title="statement not covered" >      $scope.error = "form.error";</span>
+<span class="cstat-no" title="statement not covered" >      valid = false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return valid;</span>
+  };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for rnr/model/rnr.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">rnr/model/rnr.js</span></h1>
+    <h2>
+        Statements: <span class="metric">88.2% <small>(157 / 178)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">59.15% <small>(42 / 71)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">95.45% <small>(42 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">88.37% <small>(152 / 172)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">rnr/model/</a> &#187; rnr.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">316</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">316</span>
+<span class="cline-any cline-yes">316</span>
+<span class="cline-any cline-yes">190</span>
+<span class="cline-any cline-yes">190</span>
+<span class="cline-any cline-yes">185</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">316</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">159</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">157</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">312</span>
+<span class="cline-any cline-yes">312</span>
+<span class="cline-any cline-yes">182</span>
+<span class="cline-any cline-yes">182</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">312</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-yes">156</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-yes">155</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+var Rnr = function (rnr, programRnrColumns, numberOfMonths, operationalStatuses) {
+  
+  // separate the skipped products from the not so skipped. 
+  rnr.allSupplyLineItems = rnr.fullSupplyLineItems;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if(rnr.program &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >rnr.program.hideSkippedProducts)</span>{
+<span class="cstat-no" title="statement not covered" >    rnr.skippedLineItems = _.where(rnr.allSupplyLineItems, { skipped:true});</span>
+<span class="cstat-no" title="statement not covered" >    rnr.fullSupplyLineItems =  _.where(rnr.allSupplyLineItems, {skipped: false});</span>
+  }
+  rnr.operationalStatusList = operationalStatuses;
+&nbsp;
+  $.extend(true, this, rnr);
+  var thisRnr = this;
+  this.skipAll = false;
+  this.numberOfMonths = numberOfMonths;
+&nbsp;
+  var getInvalidLineItemIndexes = function (lineItems) {
+    var errorLineItems = [];
+    $(lineItems).each(function (i, lineItem) {
+      if (!lineItem.valid()) errorLineItems.push(i);
+    });
+    return errorLineItems;
+  };
+&nbsp;
+  Rnr.prototype.getFullSupplyErrorLineItemIndexes = function () {
+    return getInvalidLineItemIndexes(this.fullSupplyLineItems);
+  };
+&nbsp;
+  Rnr.prototype.getNonFullSupplyErrorLineItemIndexes = function () {
+    return getInvalidLineItemIndexes(this.nonFullSupplyLineItems);
+  };
+&nbsp;
+  Rnr.prototype.getRegimenErrorLineItemIndexes = function () {
+&nbsp;
+    var errorLineItems = [];
+    $(this.regimenLineItems).each(function (i, lineItem) {
+      if(lineItem.hasError){
+        errorLineItems.push(i);
+      }
+    });
+    return errorLineItems;
+  };
+&nbsp;
+  Rnr.prototype.getErrorPages = function (pageSize) {
+    function getErrorPages(lineItems) {
+      var pagesWithErrors = [];
+      $(lineItems).each(function (i, lineItem) {
+        pagesWithErrors.push(Math.ceil((lineItem + 1) / pageSize));
+      });
+      return _.uniq(pagesWithErrors, true);
+    }
+&nbsp;
+    function getFullSupplyPagesWithError() {
+      var fullSupplyErrorLIneItems = thisRnr.getFullSupplyErrorLineItemIndexes();
+      return getErrorPages(fullSupplyErrorLIneItems);
+    }
+&nbsp;
+    function getNonFullSupplyPagesWithError() {
+      var nonFullSupplyErrorLIneItems = thisRnr.getNonFullSupplyErrorLineItemIndexes();
+      return getErrorPages(nonFullSupplyErrorLIneItems);
+    }
+&nbsp;
+    function getRegimenPagesWithError(){
+      var regimenErrorLineItems = thisRnr.getRegimenErrorLineItemIndexes();
+      return getErrorPages(regimenErrorLineItems);
+    }
+&nbsp;
+    var errorPages = {};
+    errorPages.fullSupply = getFullSupplyPagesWithError();
+    errorPages.nonFullSupply = getNonFullSupplyPagesWithError();
+    errorPages.regimen = getRegimenPagesWithError();
+    return errorPages;
+  };
+&nbsp;
+  Rnr.prototype.validateFullSupply = function () {
+    var errorMessage = "";
+&nbsp;
+    function validateRequiredFields(lineItem) {
+      if (lineItem.validateRequiredFieldsForFullSupply()) return true;
+      errorMessage = "error.rnr.validation";
+&nbsp;
+      return false;
+    }
+&nbsp;
+    function validateFormula(lineItem) {
+      if (lineItem.formulaValid()) return true;
+      errorMessage = "error.rnr.validation";
+&nbsp;
+      return false;
+    }
+&nbsp;
+    function validateEquipmentStatus(lineItem){
+      lineItem.isEquipmentValid = true;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(lineItem.equipments !== undefined &amp;&amp; ((<span class="branch-1 cbranch-no" title="branch not covered" >lineItem.calculatedOrderQuantity &gt; 0 </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >lineItem.quantityRequested !== 0)</span> || <span class="branch-3 cbranch-no" title="branch not covered" >lineItem.quantityRequested &gt; 0 </span>)){
+<span class="cstat-no" title="statement not covered" >        for(var i = 0; i &lt; lineItem.equipments.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >          var status = _.findWhere(this.operationalStatusList, {'id': lineItem.equipments[i].operationalStatusId});</span>
+<span class="cstat-no" title="statement not covered" >          if( statis !== undefined &amp;&amp; status.isBad === true &amp;&amp; (lineItem.equipments[i].remarks === '' || lineItem.equipments[i].remarks === undefined)){</span>
+<span class="cstat-no" title="statement not covered" >            lineItem.isEquipmentValid = false;</span>
+          }
+        }
+      }
+      return true;
+    }
+    this.equipmentErrorMessage = "";
+    $(this.fullSupplyLineItems).each(function (i, lineItem) {
+      if (lineItem.skipped)
+        return;
+      if (!validateRequiredFields(lineItem))
+        return false;
+      if (!validateFormula(lineItem))
+        return false;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!validateEquipmentStatus(lineItem))
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    });
+    return errorMessage;
+  };
+&nbsp;
+  Rnr.prototype.validateEquipments = function(){
+    var errorMessage = null;
+    $(this.equipmentLineItems).each(<span class="fstat-no" title="function not covered" >function(i,lineItem){</span>
+<span class="cstat-no" title="statement not covered" >      if(lineItem.operationalStatusId === 3 &amp;&amp; lineItem.remarks === undefined || lineItem.remarks === ''){</span>
+<span class="cstat-no" title="statement not covered" >        lineItem.IsRemarkRequired = true;</span>
+<span class="cstat-no" title="statement not covered" >        errorMessage = 'Remarks are required for equipments that are not operational';</span>
+      }
+    });
+    return errorMessage;
+  };
+&nbsp;
+  Rnr.prototype.validateNonFullSupply = function () {
+    var errorMessage = "";
+&nbsp;
+    var validateRequiredFields = function (lineItem) {
+      if (lineItem.validateRequiredFieldsForNonFullSupply()) return true;
+      errorMessage = "error.rnr.validation";
+&nbsp;
+      return false;
+    };
+&nbsp;
+    $(this.nonFullSupplyLineItems).each(function (i, lineItem) {
+      if (!validateRequiredFields(lineItem)) return false;
+    });
+    return errorMessage;
+  };
+&nbsp;
+  Rnr.prototype.validateFullSupplyForApproval = function () {
+    var error = '';
+    $(this.fullSupplyLineItems).each(function (i, lineItem) {
+      if (!lineItem.skipped &amp;&amp; isUndefined(lineItem.quantityApproved)) {
+        error = 'error.rnr.validation';
+        return false;
+      }
+    });
+    return error;
+  };
+&nbsp;
+  Rnr.prototype.validateNonFullSupplyForApproval = function () {
+    var error = '';
+    $(this.nonFullSupplyLineItems).each(function (i, lineItem) {
+      if (isUndefined(lineItem.quantityApproved)) {
+        error = 'error.rnr.validation';
+        return false;
+      }
+    });
+    return error;
+  };
+&nbsp;
+  var calculateTotalCost = function (rnrLineItems) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (rnrLineItems === null) <span class="cstat-no" title="statement not covered" >return;</span>
+&nbsp;
+    var cost = 0;
+    for (var lineItemIndex in rnrLineItems) {
+      var lineItem = rnrLineItems[lineItemIndex];
+      if (utils.isNumber(lineItem.cost) &amp;&amp; !lineItem.skipped) {
+        cost += parseFloat(lineItem.cost);
+      }
+    }
+    return cost.toFixed(2);
+  };
+&nbsp;
+  Rnr.prototype.calculateFullSupplyItemsSubmittedCost = function () {
+    this.fullSupplyItemsSubmittedCost = calculateTotalCost(this.fullSupplyLineItems);
+  };
+&nbsp;
+  Rnr.prototype.calculateNonFullSupplyItemsSubmittedCost = function () {
+    this.nonFullSupplyItemsSubmittedCost = calculateTotalCost(this.nonFullSupplyLineItems);
+  };
+&nbsp;
+  Rnr.prototype.calculateTotalLineItemCost = function () {
+    var cost = parseFloat(parseFloat(this.fullSupplyItemsSubmittedCost) + parseFloat(this.nonFullSupplyItemsSubmittedCost)).toFixed(2);
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.allocatedBudget &amp;&amp; this.program.budgetingApplies) {
+      this.costExceedsBudget = this.allocatedBudget &lt; cost;
+    }
+    return cost;
+  };
+&nbsp;
+  Rnr.prototype.fillCost = function (isFullSupply) {
+    if (isFullSupply)
+      this.calculateFullSupplyItemsSubmittedCost();
+    else
+      this.calculateNonFullSupplyItemsSubmittedCost();
+  };
+&nbsp;
+  Rnr.prototype.fillConsumptionOrStockInHand = function (rnrLineItem) {
+    rnrLineItem.fillConsumptionOrStockInHand();
+    this.fillCost(rnrLineItem.fullSupply);
+  };
+&nbsp;
+  Rnr.prototype.fillNormalizedConsumption = function (rnrLineItem) {
+    rnrLineItem.fillNormalizedConsumption();
+    this.fillCost(rnrLineItem.fullSupply);
+  };
+&nbsp;
+  Rnr.prototype.fillPacksToShip = function (rnrLineItem) {
+    rnrLineItem.fillPacksToShip();
+    this.fillCost(rnrLineItem.fullSupply);
+  };
+&nbsp;
+  Rnr.prototype.periodDisplayName = function () {
+    return this.period.stringStartDate + ' - ' + this.period.stringEndDate;
+  };
+&nbsp;
+  Rnr.prototype.reduceForApproval = function () {
+    var rnr = _.pick(this, 'id', 'fullSupplyLineItems', 'nonFullSupplyLineItems');
+    rnr.fullSupplyLineItems = _.map(rnr.fullSupplyLineItems, function (rnrLineItem) {
+      return rnrLineItem.reduceForApproval();
+    });
+    rnr.nonFullSupplyLineItems = _.map(rnr.nonFullSupplyLineItems, <span class="fstat-no" title="function not covered" >function (rnrLineItem) {</span>
+<span class="cstat-no" title="statement not covered" >      return rnrLineItem.reduceForApproval();</span>
+    });
+    return rnr;
+  };
+&nbsp;
+  Rnr.prototype.initEquipments = function(){
+&nbsp;
+    for(var i= 0; this.equipmentLineItems !== undefined &amp;&amp; i &lt; this.equipmentLineItems.length; i++){
+<span class="cstat-no" title="statement not covered" >      var eqli = this.equipmentLineItems[i];</span>
+<span class="cstat-no" title="statement not covered" >      for(var j = 0;eqli.relatedProducts !== undefined &amp;&amp; j &lt; eqli.relatedProducts.length;j++){</span>
+<span class="cstat-no" title="statement not covered" >        var prod = eqli.relatedProducts[j];</span>
+<span class="cstat-no" title="statement not covered" >        var lineItem = _.findWhere(this.fullSupplyLineItems, {productCode: prod.code});</span>
+<span class="cstat-no" title="statement not covered" >        if(lineItem !== null &amp;&amp; lineItem.equipments === undefined){</span>
+<span class="cstat-no" title="statement not covered" >            lineItem.equipments = [];</span>
+        }else <span class="cstat-no" title="statement not covered" >if(lineItem !== null){</span>
+<span class="cstat-no" title="statement not covered" >          lineItem.equipments.push(eqli);</span>
+        }
+      }
+    }
+  };
+&nbsp;
+  Rnr.prototype.init = function () {
+    var thisRnr = this;
+&nbsp;
+    function prepareLineItems(lineItems) {
+      var regularLineItems = [];
+      $(lineItems).each(function (i, lineItem) {
+        var regularLineItem = new RegularRnrLineItem(lineItem, thisRnr.numberOfMonths, programRnrColumns, thisRnr.status);
+        regularLineItems.push(regularLineItem);
+      });
+      return regularLineItems;
+    }
+&nbsp;
+    this.fullSupplyLineItems = prepareLineItems(this.fullSupplyLineItems);
+    this.nonFullSupplyLineItems = prepareLineItems(this.nonFullSupplyLineItems);
+    this.nonFullSupplyLineItems.sort(function (lineItem1, lineItem2) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (isUndefined(lineItem1))
+<span class="cstat-no" title="statement not covered" >        return 1;</span>
+      return lineItem1.compareTo(lineItem2);
+    });
+    this.programRnrColumnList = programRnrColumns;
+&nbsp;
+    this.calculateFullSupplyItemsSubmittedCost();
+    this.calculateNonFullSupplyItemsSubmittedCost();
+  };
+&nbsp;
+  this.init();
+  this.initEquipments();
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 22 2016 17:38:32 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

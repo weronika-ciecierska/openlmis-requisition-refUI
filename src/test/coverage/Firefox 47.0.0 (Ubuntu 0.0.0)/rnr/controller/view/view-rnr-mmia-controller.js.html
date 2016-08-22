@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for rnr/controller/view/view-rnr-mmia-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">rnr/controller/view/view-rnr-mmia-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">95.92% <small>(47 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">83.33% <small>(5 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">83.33% <small>(10 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">95.92% <small>(47 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">rnr/controller/view/</a> &#187; view-rnr-mmia-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-yes">88</span>
+<span class="cline-any cline-yes">88</span>
+<span class="cline-any cline-yes">88</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">72</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function ViewRnrMmiaController($scope, $route, Requisitions, messageService) {
+    $scope.adult = [];
+    $scope.children = [];
+    $scope.other = [];
+&nbsp;
+    $scope.regimeTotal = 0;
+    $scope.regimeAdult = [];
+    $scope.regimeChildren = [];
+&nbsp;
+    $scope.patient = [];
+&nbsp;
+    $scope.$on('$viewContentLoaded', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.loadMmiaDetail();</span>
+    });
+    $scope.$on('messagesPopulated', <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.initMonth();</span>
+    });
+&nbsp;
+    $scope.loadMmiaDetail = function () {
+        Requisitions.get({id: $route.current.params.rnr,operation:"skipped"}, function (data) {
+            $scope.rnr = data.rnr;
+&nbsp;
+            $scope.year = data.rnr.period.stringYear;
+&nbsp;
+            $scope.initMonth();
+            $scope.initProduct();
+            $scope.initRegime();
+&nbsp;
+            parseSignature($scope.rnr.rnrSignatures);
+        });
+&nbsp;
+    };
+&nbsp;
+    function parseSignature(signatures){
+        _.forEach(signatures,function(signature){
+            if(signature.type == "SUBMITTER"){
+                $scope.submitterSignature = signature.text;
+            } else <span class="missing-if-branch" title="else path not taken" >E</span>if (signature.type == "APPROVER"){
+                $scope.approverSignature = signature.text;
+            }
+        });
+    }
+&nbsp;
+    $scope.initMonth = function () {
+        var month = "month." + $scope.rnr.period.stringEndDate.substr(3, 2);
+        $scope.month = messageService.get(month);
+&nbsp;
+    };
+&nbsp;
+    $scope.initProduct = function () {
+        var fullSupplyLineItems = $scope.rnr.fullSupplyLineItems;
+&nbsp;
+        for (var i = 0; i &lt; fullSupplyLineItems.length; i++) {
+            formatExpirationDate(fullSupplyLineItems[i]);
+        }
+&nbsp;
+        $scope.adult = fullSupplyLineItems.slice(0,12);
+        $scope.children = fullSupplyLineItems.slice(12,22);
+        $scope.other = fullSupplyLineItems.slice(22,24);
+    };
+&nbsp;
+    var formatExpirationDate = function(theOneItem) {
+        if (theOneItem.expirationDate) {
+            var splitDate = theOneItem.expirationDate.split('/');
+            theOneItem.expirationDate = splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0];
+            theOneItem.expirationDate = new Date(theOneItem.expirationDate);
+        }
+    };
+&nbsp;
+    $scope.initRegime = function () {
+        var regimes = $scope.rnr.regimenLineItems;
+&nbsp;
+        $scope.regimeAdult = regimes.slice(0, 8);
+        $scope.regimeChildren = regimes.slice(8, 18);
+        calculateRegimeTotal(regimes);
+    };
+&nbsp;
+    var calculateRegimeTotal = function(regimes){
+        for(var i = 0; i &lt; regimes.length; i++) {
+            $scope.regimeTotal += regimes[i].patientsOnTreatment;
+        }
+    };
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 22 2016 17:38:32 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

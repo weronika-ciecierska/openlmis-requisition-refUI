@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for program-product/controller/program-product-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">program-product/controller/program-product-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">11.9% <small>(5 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">12.5% <small>(1 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">11.9% <small>(5 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">program-product/controller/</a> &#187; program-product-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function ProgramProductController($scope, programs, ProgramProducts, ProgramProductsISA, demographicCategories)</span>
+{
+<span class="cstat-no" title="statement not covered" >  $scope.programs = programs;</span>
+<span class="cstat-no" title="statement not covered" >  $scope.isaService = ProgramProductsISA; </span>//isaService is used by ISACoefficientsModalController, which is intended to be used as a descendant controller of this one.
+<span class="cstat-no" title="statement not covered" >  $scope.demographicCategories = demographicCategories; </span>//Will be undefined if we aren't in VIMS
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.loadProgramProducts = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    if ($scope.programId) {</span>
+<span class="cstat-no" title="statement not covered" >      ProgramProducts.get({programId: $scope.programId}, <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.programProducts = data.programProductList;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.filteredProducts = data.programProductList;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.assignFormula($scope.filteredProducts);</span>
+      }, {});
+    }
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.assignFormula = <span class="fstat-no" title="function not covered" >function (list) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $.each(list, <span class="fstat-no" title="function not covered" >function (index, programProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (programProduct.programProductIsa) {</span>
+<span class="cstat-no" title="statement not covered" >        var programProductIsa = new ProgramProductISA();</span>
+<span class="cstat-no" title="statement not covered" >        programProductIsa.init(programProduct.programProductIsa);</span>
+<span class="cstat-no" title="statement not covered" >        programProduct.programProductIsa = programProductIsa;</span>
+<span class="cstat-no" title="statement not covered" >        programProduct.formula = programProduct.programProductIsa.getIsaFormula();</span>
+      }
+    });
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $scope.filterProducts = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >    $scope.filteredProducts = [];</span>
+<span class="cstat-no" title="statement not covered" >    var query = $scope.query || "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.filteredProducts = $.grep($scope.programProducts, <span class="fstat-no" title="function not covered" >function (programProduct) {</span></span>
+<span class="cstat-no" title="statement not covered" >      return programProduct.product.primaryName.toLowerCase().indexOf(query.toLowerCase()) != -1;</span>
+    });
+  };
+&nbsp;
+}
+&nbsp;
+ProgramProductController.resolve = {
+  programs: <span class="fstat-no" title="function not covered" >function ($q, Programs, $location, $route, $timeout) {</span>
+<span class="cstat-no" title="statement not covered" >    var deferred = $q.defer();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $timeout</span>
+    (
+<span class="fstat-no" title="function not covered" >              function()</span>
+              {
+<span class="cstat-no" title="statement not covered" >                Programs.get({type: ''}, <span class="fstat-no" title="function not covered" >function(data)</span></span>
+                                         {
+<span class="cstat-no" title="statement not covered" >                                            deferred.resolve(data.programs);</span>
+                                         },
+&nbsp;
+<span class="fstat-no" title="function not covered" >                                         function()</span>
+                                         {
+<span class="cstat-no" title="statement not covered" >                                            location.path('/');</span>
+                                         }
+                            );
+              },
+              100
+    );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return deferred.promise;</span>
+  }
+};
+&nbsp;
+//Begin: Specific for Tanzania
+/*  The code below is intended to illustrate one potential way of conditionally injecting demographic-category data
+ For now, because we don’t have a way to conditionally toggle OpenLMIS’ features on and off, we simple set injectDemographyCategories to true. */
+var injectDemographyCategories = true;
+<span class="missing-if-branch" title="else path not taken" >E</span>if(injectDemographyCategories)
+{
+    ProgramProductController.resolve.demographicCategories = <span class="fstat-no" title="function not covered" >function ($q, $route, $timeout, DemographicEstimateCategories)</span>
+    {
+<span class="cstat-no" title="statement not covered" >        var deferred = $q.defer();</span>
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            DemographicEstimateCategories.get({}, <span class="fstat-no" title="function not covered" >function(data)</span></span>
+            {
+                //Add 'Facility Population' to the set of available categories
+<span class="cstat-no" title="statement not covered" >                var categories = data.estimate_categories;</span>
+<span class="cstat-no" title="statement not covered" >                var facilityCatchmentPopulation = {'id': 0, 'name': 'Facility Catchment Population'};</span>
+<span class="cstat-no" title="statement not covered" >                categories.unshift(facilityCatchmentPopulation);</span>
+<span class="cstat-no" title="statement not covered" >                deferred.resolve(categories);</span>
+            }, {});
+        }, 100);
+<span class="cstat-no" title="statement not covered" >        return deferred.promise;</span>
+    };
+}
+else //As suggested in the comments above, this else-clause is intended to run for non-Tanzanian countries.
+{
+    //demographicEstimateCategories has to be assigned something...
+<span class="cstat-no" title="statement not covered" >    ProgramProductController.resolve.demographicCategories = <span class="fstat-no" title="function not covered" >function($timeout)</span></span>
+    {
+        //...so set it to a $timeout which returns a promise that will be resolved
+<span class="cstat-no" title="statement not covered" >        return $timeout</span>
+        (
+<span class="fstat-no" title="function not covered" >            function() {</span>},
+            5
+        );
+    };
+}
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for vaccine/controller/vaccine-report-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">vaccine/controller/vaccine-report-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">3.17% <small>(2 / 63)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 34)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 11)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">3.57% <small>(2 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">vaccine/controller/</a> &#187; vaccine-report-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+<span class="fstat-no" title="function not covered" >function VaccineReportPOCReportController($scope, VaccineMonthlyReport, VaccineUsageTrend, Period, messageService, VaccineReportLegendContent) {</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    VaccineReportLegendContent.get({}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.definitions = data.vaccineLegend;</span>
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined($scope.definitions)){</span>
+<span class="cstat-no" title="statement not covered" >           $scope.consumptionLegend = _.findWhere($scope.definitions, {"name":"consumption.graph.legend"});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.sohLegend = _.findWhere($scope.definitions,{name:'soh.graph.legend'});</span>
+        }
+    });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.OnFilterChanged = <span class="fstat-no" title="function not covered" >function() {</span></span>
+&nbsp;
+      /*  if(isUndefined($scope.filter.period) || $scope.filter.period == 0){
+            $scope.filter.period = $scope.filter.defaultPeriodId;
+&nbsp;
+        }*/
+        // clear old data if there was any
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.data = $scope.datarows = [];</span>
+<span class="cstat-no" title="statement not covered" >        $scope.filter.max = 10000;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        Period.get({id: $scope.filter.period}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.period = data.period;</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(isUndefined($scope.filter.zone) || messageService.get('report.filter.all.geographic.zones') == $scope.filter.zone){</span>
+<span class="cstat-no" title="statement not covered" >            $scope.filter.zone = -1;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(isUndefined($scope.filter.facility) || $scope.filter.facility === ""){</span>
+<span class="cstat-no" title="statement not covered" >            $scope.filter.facility = 0;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.showOtherActivities = false;</span>
+        }else <span class="cstat-no" title="statement not covered" >if($scope.filter.facility !== 0 ){</span>
+<span class="cstat-no" title="statement not covered" >            $scope.showOtherActivities = true;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if($scope.filter.period !== null &amp;&amp; $scope.filter.period !== 0</span>
+        ){
+<span class="cstat-no" title="statement not covered" >            VaccineMonthlyReport.get($scope.filter, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.data = data.vaccineData;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if($scope.data !== null){</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.diseaseSurveillance = $scope.data.diseaseSurveillance;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.coldChain = $scope.data.coldChain;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.adverseEffect = $scope.data.adverseEffect;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.vaccineCoverage = $scope.data.vaccineCoverage;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.immunizationSession = $scope.data.immunizationSession;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.vaccination = $scope.data.vaccination;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.syringes = $scope.data.syringes;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.vitamins = $scope.data.vitamins;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.targetPopulation = $scope.data.targetPopulation;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.vitaminSupplementation = $scope.data.vitaminSupplementation;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.dropOuts = $scope.data.dropOuts;</span>
+                }
+            });
+&nbsp;
+        }
+&nbsp;
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.renderGraph = <span class="fstat-no" title="function not covered" >function(facilityCode, productCode){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.filter.facilityCode = isUndefined(facilityCode)? '' : facilityCode;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.filter.productCode =  isUndefined(productCode)? '': productCode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        VaccineUsageTrend.get($scope.filter, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.trendingData = data.vaccineUsageTrend;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.periodTicks = _.pairs(_.object(_.range($scope.trendingData.length), _.pluck($scope.trendingData,'period_name')));</span>
+<span class="cstat-no" title="statement not covered" >            $scope.amcChartData = _.pairs(_.object(_.range($scope.trendingData.length), _.pluck($scope.trendingData,'quantity_issued')));</span>
+<span class="cstat-no" title="statement not covered" >            $scope.sohChartData = _.pairs(_.object(_.range($scope.trendingData.length), _.pluck($scope.trendingData,'closing_balance')));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.amcChartOption = generateBarsOption($scope.periodTicks, messageService.get('label.consumption'));</span>
+<span class="cstat-no" title="statement not covered" >            $scope.sohChartOption = generateBarsOption($scope.periodTicks, messageService.get('label.stock.on.hand'));</span>
+<span class="cstat-no" title="statement not covered" >            $scope.amcChart = [{</span>
+                label: messageService.get('label.consumption'),
+                data:  $scope.amcChartData,
+                color: "#faa732",
+                bars: {
+                    show: true,
+                    showNumbers: true,
+                    numbers : {
+                        yAlign: <span class="fstat-no" title="function not covered" >function(y) {</span> <span class="cstat-no" title="statement not covered" >if(y!==0){ <span class="cstat-no" title="statement not covered" >return y ; </span>}else{<span class="cstat-no" title="statement not covered" >return null;}</span>}</span>
+                        //show: true
+                    },
+&nbsp;
+                    align: "center",
+                    barWidth: 0.5,
+                    fill: 0.9,
+                    lineWidth:1
+                }
+            }];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.sohChart = [</span>
+                {
+                    label: messageService.get('label.stock.on.hand'),
+                    data:  $scope.sohChartData,
+                    color: "#5eb95e",
+                    bars: {
+                        show: true,
+                        showNumbers: true,
+                        numbers : {
+                            yAlign: <span class="fstat-no" title="function not covered" >function(y) {</span> <span class="cstat-no" title="statement not covered" >if(y!==0){ <span class="cstat-no" title="statement not covered" >return y ; </span>}else{<span class="cstat-no" title="statement not covered" >return null;}</span>}</span>
+                            //show: true
+                        },
+&nbsp;
+                         align: "center",
+                         barWidth: 0.5,
+                         fill: 0.9,
+                         lineWidth:1
+                    }
+                }];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.renderIt = true;</span>
+        });
+    };
+<span class="cstat-no" title="statement not covered" >    $scope.renderIt = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.colorify = <span class="fstat-no" title="function not covered" >function(value){</span></span>
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined(value)){</span>
+<span class="cstat-no" title="statement not covered" >            if(value &gt;= 95) <span class="cstat-no" title="statement not covered" >return 'green';</span></span>
+<span class="cstat-no" title="statement not covered" >            if(value &lt; 0) <span class="cstat-no" title="statement not covered" >return 'blue';</span></span>
+<span class="cstat-no" title="statement not covered" >            if(value &lt;= 50) <span class="cstat-no" title="statement not covered" >return 'red';</span></span>
+        }
+&nbsp;
+    };
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function generateBarsOption(tickLabel, yaxizLabel){</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+            legend: {
+                position:"nw",
+                noColumns: 1,
+                labelBoxBorderColor: "none"
+            },
+            xaxis: {
+                tickLength: 0, // hide gridlines
+                // axisLabel: xaxisLabel,
+                axisLabelUseCanvas: false,
+                ticks: tickLabel,
+                labelWidth: 10,
+                reserveSpace: true
+&nbsp;
+            } ,
+            yaxes: [
+                {
+                    position: "left",
+                    //max: 1070,
+                    color: "#5eb95e",
+                    axisLabel: yaxizLabel,
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 12,
+                    axisLabelFontFamily: 'Verdana, Arial',
+                    axisLabelPadding: 23
+                }
+            ],
+&nbsp;
+            grid: {
+                hoverable: true,
+                borderWidth: 1,
+                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
+            },
+            tooltip: true,
+            tooltipOpts: {
+                content: "%s is %y",
+                shifts: {
+                    x: 20,
+                    y: 0
+                },
+                defaultTheme: false
+            }
+        };
+&nbsp;
+    }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

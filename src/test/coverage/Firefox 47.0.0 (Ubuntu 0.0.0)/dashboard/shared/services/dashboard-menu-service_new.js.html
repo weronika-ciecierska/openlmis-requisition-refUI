@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dashboard/shared/services/dashboard-menu-service_new.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">dashboard/shared/services/dashboard-menu-service_new.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.56% <small>(1 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.63% <small>(1 / 38)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">dashboard/shared/services/</a> &#187; dashboard-menu-service_new.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created with IntelliJ IDEA.
+ * User: issa
+ * Date: 3/30/14
+ * Time: 1:23 AM
+ * To change this template use File | Settings | File Templates.
+ */
+services.factory('dashboardMenuServiceNew',<span class="fstat-no" title="function not covered" >function($rootScope,$location){</span>
+<span class="cstat-no" title="statement not covered" >    var dashboardMenuService = {};</span>
+<span class="cstat-no" title="statement not covered" >    dashboardMenuService.tabs = [];</span>
+  /*  dashboardMenuService.tabs = [{header: 'menu.header.dashboard.summary', content:'/public/pages/dashboard/index.html', name:'SUMMARY', closable:false, displayOrder: 0},
+        {header: 'menu.header.dashboard.stock.efficiency', content:'/public/pages/dashboard/index.html#/stock', name:'STOCK', closable:false, displayOrder: 1},
+        {header: 'menu.header.dashboard.order.turn.around', content:'/public/pages/dashboard/index.html#/leadTime', name:'ORDER', closable: false, displayOrder: 2},
+        {header: 'menu.header.dashboard.stocked.out', content:'/public/pages/dashboard/index.html#/stock-out', name:'STOCK-OUT', closable: false, displayOrder: 3},
+        {header: 'menu.header.dashboard.notification', content:'/public/pages/dashboard/index.html#/notifications', name:'NOTIFICATION', closable: false, displayOrder: 4},
+        {header: 'menu.header.dashboard.rnr.status.summary', content: '/public/pages/dashboard/index.html#/rnr-status-summary',name: 'RNR-STATUS-SUMMARY',closeable:false,displayOrder:5}];
+&nbsp;
+*/
+<span class="cstat-no" title="statement not covered" >    dashboardMenuService.addTab = <span class="fstat-no" title="function not covered" >function(header, content, name, closable, displayOrder){</span></span>
+<span class="cstat-no" title="statement not covered" >        var tab = isTabExists(name);</span>
+<span class="cstat-no" title="statement not covered" >        var newTab = {header:header, content: content, name:name, closable:closable, displayOrder: displayOrder, id: displayOrder};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(_.isEqual(tab, newTab)){</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(_.isUndefined(tab)){</span>
+<span class="cstat-no" title="statement not covered" >            dashboardMenuService.tabs.push(newTab);</span>
+        }else <span class="cstat-no" title="statement not covered" >if(tab.name === newTab.name){ //replace</span>
+<span class="cstat-no" title="statement not covered" >            dashboardMenuService.tabs[_.indexOf(dashboardMenuService.tabs,tab)] = newTab;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        broadcastUpdate();</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    dashboardMenuService.getTab = <span class="fstat-no" title="function not covered" >function(position){</span></span>
+<span class="cstat-no" title="statement not covered" >      return dashboardMenuService.tabs[position];</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    dashboardMenuService.closeTab = <span class="fstat-no" title="function not covered" >function(tabName){</span></span>
+<span class="cstat-no" title="statement not covered" >        var tab = isTabExists(tabName);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var closedTabIndex = _.indexOf(dashboardMenuService.tabs,tab);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        dashboardMenuService.tabs = _.reject(dashboardMenuService.tabs, <span class="fstat-no" title="function not covered" >function(tab){<span class="cstat-no" title="statement not covered" ></span>return tab.name === tabName &amp;&amp; tab.closable === true;}</span>);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var tabToShow = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined(tab)){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var visibleTab;</span>
+<span class="cstat-no" title="statement not covered" >            var nextTab = _.findWhere(dashboardMenuService.tabs,{displayOrder: tab.displayOrder + 1});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(nextTab !== undefined){</span>
+<span class="cstat-no" title="statement not covered" >                visibleTab = nextTab.content;</span>
+&nbsp;
+            }else <span class="cstat-no" title="statement not covered" >if(closedTabIndex &gt; 0){</span>
+<span class="cstat-no" title="statement not covered" >                visibleTab = dashboardMenuService.tabs[closedTabIndex-1].content;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            tabToShow += visibleTab.slice(visibleTab.indexOf('#')+1);</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        broadcastUpdate();</span>
+<span class="cstat-no" title="statement not covered" >        $location.path(tabToShow);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var broadcastUpdate = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        $rootScope.$broadcast('dashboardTabUpdated');</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var isTabExists = <span class="fstat-no" title="function not covered" >function(tabName){</span></span>
+<span class="cstat-no" title="statement not covered" >        var tab = _.findWhere(dashboardMenuService.tabs, {name:tabName});</span>
+<span class="cstat-no" title="statement not covered" >        if(_.isUndefined(tab)){</span>
+<span class="cstat-no" title="statement not covered" >            return undefined;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return tab;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return dashboardMenuService;</span>
+&nbsp;
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

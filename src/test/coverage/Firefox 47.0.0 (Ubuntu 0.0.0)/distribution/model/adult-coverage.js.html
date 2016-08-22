@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for distribution/model/adult-coverage.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">distribution/model/adult-coverage.js</span></h1>
+    <h2>
+        Statements: <span class="metric">22.68% <small>(22 / 97)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">23.4% <small>(22 / 94)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">distribution/model/</a> &#187; adult-coverage.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ *  Copyright © 2013 VillageReach
+ *
+ *  This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *    
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *  You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function AdultCoverage(facilityVisitId, adultCoverageJSON) {</span>
+<span class="cstat-no" title="statement not covered" >  $.extend(true, this, adultCoverageJSON);</span>
+<span class="cstat-no" title="statement not covered" >  this.facilityVisitId = facilityVisitId;</span>
+<span class="cstat-no" title="statement not covered" >  var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $(this.adultCoverageLineItems).each(<span class="fstat-no" title="function not covered" >function (i, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    _this.adultCoverageLineItems[i] = new AdultCoverageLineItem(lineItem);</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $(this.openedVialLineItems).each(<span class="fstat-no" title="function not covered" >function (i, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    _this.openedVialLineItems[i] = new OpenedVialLineItem(lineItem);</span>
+  });
+}
+&nbsp;
+AdultCoverage.prototype.computeStatus = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var status;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  var isValid = <span class="fstat-no" title="function not covered" >function (field) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!field)</span>
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+<span class="cstat-no" title="statement not covered" >    return !(isUndefined(field.value) &amp;&amp; !field.notRecorded);</span>
+  };
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function validateLineItems(lineItems, mandatoryFields) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var nonHealthCenterDemographicGroups = ["MIF 15-49 years - Students", "MIF 15-49 years - Workers", "Students not MIF", "Workers not MIF"];</span>
+<span class="cstat-no" title="statement not covered" >    var attributesNotDefined = ["healthCenterTetanus1", "healthCenterTetanus2To5"];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $(lineItems).each(<span class="fstat-no" title="function not covered" >function (index, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >      $(mandatoryFields).each(<span class="fstat-no" title="function not covered" >function (index, field) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (nonHealthCenterDemographicGroups.indexOf(lineItem.demographicGroup) &gt;= 0 &amp;&amp; attributesNotDefined.indexOf(field) &gt;= 0)</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+<span class="cstat-no" title="statement not covered" >        if (isValid(lineItem[field]) &amp;&amp; (status === DistributionStatus.COMPLETE || !status)) {</span>
+<span class="cstat-no" title="statement not covered" >          status = DistributionStatus.COMPLETE;</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        } else <span class="cstat-no" title="statement not covered" >if (!isValid(lineItem[field]) &amp;&amp; (status === DistributionStatus.EMPTY || !status)) {</span>
+<span class="cstat-no" title="statement not covered" >          status = DistributionStatus.EMPTY;</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
+        } else <span class="cstat-no" title="statement not covered" >if ((isValid(lineItem[field]) &amp;&amp; status === DistributionStatus.EMPTY) ||</span>
+          (!isValid(lineItem[field])) &amp;&amp; status === DistributionStatus.COMPLETE) {
+<span class="cstat-no" title="statement not covered" >          status = DistributionStatus.INCOMPLETE;</span>
+<span class="cstat-no" title="statement not covered" >          return false;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+      });
+<span class="cstat-no" title="statement not covered" >      return status !== DistributionStatus.INCOMPLETE;</span>
+    });
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  validateLineItems(this.adultCoverageLineItems, ['healthCenterTetanus1', 'outreachTetanus1', 'healthCenterTetanus2To5', 'outreachTetanus2To5']);</span>
+<span class="cstat-no" title="statement not covered" >  validateLineItems(this.openedVialLineItems, ['openedVial']);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  this.status = status;</span>
+<span class="cstat-no" title="statement not covered" >  return this.status;</span>
+};
+&nbsp;
+AdultCoverage.prototype.wastageRate = <span class="fstat-no" title="function not covered" >function (lineItem) {</span>
+<span class="cstat-no" title="statement not covered" >  return lineItem.wastageRate(this.totalTetanus());</span>
+};
+&nbsp;
+AdultCoverage.prototype.setNotRecorded = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  $(this.adultCoverageLineItems).each(<span class="fstat-no" title="function not covered" >function (i, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    lineItem.setNotRecorded();</span>
+  });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  $(this.openedVialLineItems).each(<span class="fstat-no" title="function not covered" >function (i, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    lineItem.setNotRecorded();</span>
+  });
+};
+&nbsp;
+AdultCoverage.prototype.totalHealthCenterTetanus1 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.sumOfAttributes('healthCenterTetanus1');</span>
+};
+AdultCoverage.prototype.totalOutreachTetanus1 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.sumOfAttributes('outreachTetanus1');</span>
+};
+AdultCoverage.prototype.totalHealthCenterTetanus2To5 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.sumOfAttributes('healthCenterTetanus2To5');</span>
+};
+AdultCoverage.prototype.totalOutreachTetanus2To5 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.sumOfAttributes('outreachTetanus2To5');</span>
+};
+&nbsp;
+AdultCoverage.prototype.totalTetanus1 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.totalHealthCenterTetanus1() + this.totalOutreachTetanus1();</span>
+};
+&nbsp;
+AdultCoverage.prototype.totalTetanus2To5 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.totalHealthCenterTetanus2To5() + this.totalOutreachTetanus2To5();</span>
+};
+&nbsp;
+AdultCoverage.prototype.totalTetanus = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.totalTetanus1() + this.totalTetanus2To5();</span>
+};
+&nbsp;
+AdultCoverage.prototype.sumOfAttributes = <span class="fstat-no" title="function not covered" >function (attribute) {</span>
+<span class="cstat-no" title="statement not covered" >  var total = 0;</span>
+<span class="cstat-no" title="statement not covered" >  $(this.adultCoverageLineItems).each(<span class="fstat-no" title="function not covered" >function (i, lineItem) {</span></span>
+<span class="cstat-no" title="statement not covered" >    var currentValue = isUndefined(lineItem[attribute]) ? 0 : lineItem[attribute].value;</span>
+<span class="cstat-no" title="statement not covered" >    total = utils.sum(total, currentValue);</span>
+  });
+<span class="cstat-no" title="statement not covered" >  return total;</span>
+};
+&nbsp;
+<span class="fstat-no" title="function not covered" >function AdultCoverageLineItem(lineItem) {</span>
+<span class="cstat-no" title="statement not covered" >  $.extend(true, this, lineItem);</span>
+<span class="cstat-no" title="statement not covered" >  this.healthCenterTetanus1 = this.healthCenterTetanus1 || {};</span>
+<span class="cstat-no" title="statement not covered" >  this.healthCenterTetanus2To5 = this.healthCenterTetanus2To5 || {};</span>
+}
+&nbsp;
+AdultCoverageLineItem.prototype.setNotRecorded = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  this.healthCenterTetanus1 = {notRecorded: true};</span>
+<span class="cstat-no" title="statement not covered" >  this.outreachTetanus1 = {notRecorded: true};</span>
+<span class="cstat-no" title="statement not covered" >  this.healthCenterTetanus2To5 = {notRecorded: true};</span>
+<span class="cstat-no" title="statement not covered" >  this.outreachTetanus2To5 = {notRecorded: true};</span>
+};
+&nbsp;
+AdultCoverageLineItem.prototype.totalTetanus1 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var value1 = isUndefined(this.healthCenterTetanus1) ? 0 : this.healthCenterTetanus1.value;</span>
+<span class="cstat-no" title="statement not covered" >  var value2 = isUndefined(this.outreachTetanus1) ? 0 : this.outreachTetanus1.value;</span>
+<span class="cstat-no" title="statement not covered" >  return utils.sum(value1, value2);</span>
+};
+&nbsp;
+AdultCoverageLineItem.prototype.totalTetanus2To5 = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var value1 = isUndefined(this.healthCenterTetanus2To5) ? 0 : this.healthCenterTetanus2To5.value;</span>
+<span class="cstat-no" title="statement not covered" >  var value2 = isUndefined(this.outreachTetanus2To5) ? 0 : this.outreachTetanus2To5.value;</span>
+<span class="cstat-no" title="statement not covered" >  return utils.sum(value1, value2);</span>
+};
+&nbsp;
+AdultCoverageLineItem.prototype.totalTetanus = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return this.totalTetanus1() + this.totalTetanus2To5();</span>
+};
+&nbsp;
+AdultCoverageLineItem.prototype.coverageRate = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  if (isUndefined(this.targetGroup) || this.targetGroup === 0) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >  return Math.round((this.totalTetanus2To5() / this.targetGroup) * 100);</span>
+};
+&nbsp;
+<span class="fstat-no" title="function not covered" >function OpenedVialLineItem(lineItem) {</span>
+<span class="cstat-no" title="statement not covered" >  $.extend(true, this, lineItem);</span>
+}
+&nbsp;
+OpenedVialLineItem.prototype.wastageRate = <span class="fstat-no" title="function not covered" >function (totalTetanus) {</span>
+<span class="cstat-no" title="statement not covered" >  if (isUndefined(this.openedVial) || isUndefined(this.openedVial.value) || isUndefined(this.packSize)) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >  var totalDosesConsumed = this.openedVial.value * this.packSize;</span>
+<span class="cstat-no" title="statement not covered" >  if (totalDosesConsumed === 0) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >  return Math.round((totalDosesConsumed - totalTetanus) / totalDosesConsumed * 100);</span>
+};
+&nbsp;
+OpenedVialLineItem.prototype.setNotRecorded = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  this.openedVial = {notRecorded: true};</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

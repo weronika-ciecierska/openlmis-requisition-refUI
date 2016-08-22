@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for admin/equipment/vendor/controller/create-vendor-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">admin/equipment/vendor/controller/create-vendor-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">1.49% <small>(1 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">1.49% <small>(1 / 67)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">admin/equipment/vendor/controller/</a> &#187; create-vendor-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function CreateVendorController($scope, $routeParams, $location, $dialog, messageService, Vendor, SaveVendor, UserListForVendor, UserListAvailableForVendor, SaveVendorUserAssociation, RemoveVendorUserAssociation, DeleteVendor) {</span>
+<span class="cstat-no" title="statement not covered" >    $scope.vendorUser = {};</span>
+<span class="cstat-no" title="statement not covered" >    $scope.loadUsersForVendor = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        UserListForVendor.get({id:$routeParams.id},<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.users = data.users;</span>
+        });
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.$parent.message = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.loadAvailableUsersForVendor = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        UserListAvailableForVendor.get(<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(data.users, <span class="fstat-no" title="function not covered" >function(item){</span></span>
+<span class="cstat-no" title="statement not covered" >              item.fullName = item.firstName.concat(' ').concat(item.lastName);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            $scope.allUsers = data.users;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.usersLoaded = true;</span>
+        });
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.loadAvailableUsersForVendor();</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if ($routeParams.id === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.current = {};</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >        Vendor.get({</span>
+            id: $routeParams.id
+        }, <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.current = data.vendor;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.vendorUser.vendor = $scope.current;</span>
+            //The vendor user object holds the association with users
+        });
+<span class="cstat-no" title="statement not covered" >        $scope.loadUsersForVendor();</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.save = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.showError = true;</span>
+<span class="cstat-no" title="statement not covered" >        if($scope.vendorForm.$valid){</span>
+<span class="cstat-no" title="statement not covered" >            SaveVendor.save($scope.current, <span class="fstat-no" title="function not covered" >function () {</span></span>
+                // success
+<span class="cstat-no" title="statement not covered" >                $scope.$parent.message = 'Your changes have been saved';</span>
+<span class="cstat-no" title="statement not covered" >                $location.path('');</span>
+            }, <span class="fstat-no" title="function not covered" >function (data) {</span>
+                // error
+<span class="cstat-no" title="statement not covered" >                $scope.error = data.messages;</span>
+            });
+        }
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.cancel = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $location.path('');</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.addNewVendorUserAssociation = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.userVendorAssociationModal = true;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.selectedUser = null;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.closeModal=<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.userVendorAssociationModal = false;</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.saveUserVendorAssociation = <span class="fstat-no" title="function not covered" >function (){</span></span>
+<span class="cstat-no" title="statement not covered" >        var successHandler = <span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.error = "";</span>
+<span class="cstat-no" title="statement not covered" >            $scope.message = response.success;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadUsersForVendor();</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var errorHandler = <span class="fstat-no" title="function not covered" >function (response) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.error = messageService.get(response.data.error);</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        SaveVendorUserAssociation.save($scope.vendorUser, successHandler, errorHandler);</span>
+<span class="cstat-no" title="statement not covered" >        $scope.closeModal();</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.showRemoveVendorUserAssociationConfirmDialog = <span class="fstat-no" title="function not covered" >function (index) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var userToRemove = $scope.users[index];</span>
+<span class="cstat-no" title="statement not covered" >        $scope.userToRemove = userToRemove;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.index = index;</span>
+<span class="cstat-no" title="statement not covered" >        var options = {</span>
+            id: "removeVendorUserAssociationConfirmDialog",
+            header: "Confirmation",
+            body: "Please confirm that you want to remove the association of this vendor with user: " + userToRemove.firstName
+        };
+<span class="cstat-no" title="statement not covered" >        OpenLmisDialog.newDialog(options, $scope.removeVendorUserAssociationConfirm, $dialog, messageService);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.removeVendorUserAssociationConfirm = <span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (result) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.users.splice($scope.index,1);</span>
+<span class="cstat-no" title="statement not covered" >            $scope.removeVendorUserAssociation();</span>
+        }
+<span class="cstat-no" title="statement not covered" >        $scope.userToRemove = undefined;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.loadAvailableUsersForVendor();</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.removeVendorUserAssociation = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        RemoveVendorUserAssociation.get({userId: $scope.userToRemove.id, vendorId: $scope.current.id});</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.showDeleteVendorConfirmDialog = <span class="fstat-no" title="function not covered" >function(vendor){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.vendorToRemove = vendor;</span>
+<span class="cstat-no" title="statement not covered" >        var options = {</span>
+            id: "deleteVendorConfirmDialog",
+            header: "Confirmation",
+            body: "Please confirm that you want to delete vendor with name: &lt;strong&gt;" + $scope.vendorToRemove.name +'&lt;/strong&gt;?'
+        };
+<span class="cstat-no" title="statement not covered" >        OpenLmisDialog.newDialog(options, $scope.removeVendorConfirm, $dialog, messageService);</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.removeVendorConfirm = <span class="fstat-no" title="function not covered" >function (result) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (result) {</span>
+<span class="cstat-no" title="statement not covered" >            DeleteVendor.get({ id: $scope.vendorToRemove.id}, <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.$parent.message = 'Vendor deleted successfully';</span>
+<span class="cstat-no" title="statement not covered" >                $location.path('/');</span>
+&nbsp;
+            }, <span class="fstat-no" title="function not covered" >function(data){</span>
+<span class="cstat-no" title="statement not covered" >                $scope.error = data.data.error;</span>
+<span class="cstat-no" title="statement not covered" >                console.log(data.data.error);</span>
+            });
+&nbsp;
+        }
+&nbsp;
+    };
+}</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

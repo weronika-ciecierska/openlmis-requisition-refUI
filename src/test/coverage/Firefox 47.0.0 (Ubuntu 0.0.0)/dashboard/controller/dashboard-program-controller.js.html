@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dashboard/controller/dashboard-program-controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">dashboard/controller/dashboard-program-controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">3.76% <small>(7 / 186)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 64)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 41)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">3.95% <small>(7 / 177)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">dashboard/controller/</a> &#187; dashboard-program-controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * Electronic Logistics Management Information System (eLMIS) is a supply chain management system for health commodities in a developing country setting.
+ *
+ * Copyright (C) 2015  John Snow, Inc (JSI). This program was produced for the U.S. Agency for International Development (USAID). It was prepared under the USAID | DELIVER PROJECT, Task Order 4.
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+&nbsp;
+<span class="fstat-no" title="function not covered" >function DashboardProgramController($scope,$routeParams,$timeout,$filter,messageService, dashboardMenuServiceNew, UserSupervisedActivePrograms, GetLastPeriods, GetProgramPeriodTracerProductsTrend, GetStockOutFacilitiesForProgramPeriodAndProductCode, DashboardReportingPerformance, DashboardDistrictStockSummary, DashboardFacilityStockSummary, SettingsByKey) {</span>
+<span class="cstat-no" title="statement not covered" >    var dashboardMenuService = dashboardMenuServiceNew;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    SettingsByKey.get({key: 'DASHBOARD_SLIDES_TRANSITION_INTERVAL_MILLISECOND'}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.defaultSlideTransitionInterval = data.settings.value;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.consumptionSlideInterval = $scope.stockSlideInterval = $scope.lossesSlideInterval = $scope.defaultSlideTransitionInterval;</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var carousel = <span class="fstat-no" title="function not covered" >function(id){</span></span>
+<span class="cstat-no" title="statement not covered" >            return {id: id,</span>
+                interval: $scope.defaultSlideTransitionInterval,
+                isPlaying:  <span class="fstat-no" title="function not covered" >function(){</span> <span class="cstat-no" title="statement not covered" >return this.interval &gt;= 0;}</span>,
+                play: <span class="fstat-no" title="function not covered" >function(){</span> <span class="cstat-no" title="statement not covered" >this.interval = $scope.defaultSlideTransitionInterval; <span class="cstat-no" title="statement not covered" ></span>this.isPlaying = true;}</span>,
+                pause: <span class="fstat-no" title="function not covered" >function(){<span class="cstat-no" title="statement not covered" ></span>this.interval = -1; <span class="cstat-no" title="statement not covered" ></span>this.isPlaying = false; </span>}};
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.carousels = [carousel('trend'), carousel('district'), carousel('facility')];</span>
+    });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.setInterval = <span class="fstat-no" title="function not covered" >function(carouselId){</span></span>
+<span class="cstat-no" title="statement not covered" >        var cr = _.findWhere($scope.carousels, {id: carouselId});</span>
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined(cr)){</span>
+<span class="cstat-no" title="statement not covered" >            return cr.interval;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return -1;</span>
+    };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var  colors = ["bg-green", "bg-red","bg-blue"];</span>
+    /**
+     * Returns Random color
+     * @returns {string}
+     */
+<span class="cstat-no" title="statement not covered" >    $scope.colorify = <span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >        var index = Math.floor(Math.random() * (2 - 0 + 1)) + 0;</span>
+<span class="cstat-no" title="statement not covered" >        return colors[index];</span>
+&nbsp;
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var $scaleColor = '#D7D5D5';</span>
+<span class="cstat-no" title="statement not covered" >    var defaultBarColor = '#FEBA50';</span>
+<span class="cstat-no" title="statement not covered" >    var $lineWidth = 5;</span>
+<span class="cstat-no" title="statement not covered" >    var barColor = defaultBarColor;</span>
+<span class="cstat-no" title="statement not covered" >    var barColors =['#E23E3E','#FEBA50','#38AB49'];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.tabs = [{title:'Overview', content:'Overview content'},{title:'Legend', content:'Legend content'}];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.dashboardTabs = dashboardMenuService.tabs;</span>
+<span class="cstat-no" title="statement not covered" >    $scope.dashboardTabs = [];</span>
+<span class="cstat-no" title="statement not covered" >    UserSupervisedActivePrograms.get(<span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.programsList = data.programs;</span>
+<span class="cstat-no" title="statement not covered" >        angular.forEach(data.programs, <span class="fstat-no" title="function not covered" >function(program){</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            dashboardMenuService.addTab("'"+program.name+"'",'/public/pages/dashboard/index_new.html#/dashboard-new?programId='+program.id,program.name,false, program.id);</span>
+        });
+<span class="cstat-no" title="statement not covered" >        dashboardMenuService.addTab('Facility','/public/pages/dashboard/index_new.html#/dashboard-new?facilityId=0',messageService.get('label.facility'),false, messageService.get('label.facility'));</span>
+<span class="cstat-no" title="statement not covered" >        dashboardMenuService.addTab('Notification','/public/pages/dashboard/index_new.html#/dashboard-new?notificationId=0',messageService.get('label.notification'),false, messageService.get('label.notification'));</span>
+<span class="cstat-no" title="statement not covered" >        $scope.dashboardTabs = dashboardMenuService.tabs;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined($routeParams.programId)){</span>
+<span class="cstat-no" title="statement not covered" >            $scope.currentTab = $scope.programId = $routeParams.programId;</span>
+        }else <span class="cstat-no" title="statement not covered" >if(!isUndefined($routeParams.facilityId)){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.currentTab = 'Facility';</span>
+        }else <span class="cstat-no" title="statement not covered" >if(!isUndefined($routeParams.notificationId)){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.currentTab = 'Notification';</span>
+        }else{
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.currentTab = $scope.programId =  dashboardMenuService.getTab(0).id;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        getLastPeriods();</span>
+&nbsp;
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var options ={};</span>
+<span class="cstat-no" title="statement not covered" >    $scope.getFIllRateOption = <span class="fstat-no" title="function not covered" >function(fillRate){</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(fillRate &gt;= 0 &amp;&amp; fillRate &lt;=50){</span>
+<span class="cstat-no" title="statement not covered" >            barColor = barColors[0];</span>
+        }else <span class="cstat-no" title="statement not covered" >if(fillRate &gt; 50 &amp;&amp; fillRate &lt;= 70){</span>
+<span class="cstat-no" title="statement not covered" >            barColor = barColors[1];</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >            barColor = barColors[2];</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        options.animate = 3000;</span>
+<span class="cstat-no" title="statement not covered" >        options.barColor = barColor;</span>
+<span class="cstat-no" title="statement not covered" >        options.scaleColor = $scaleColor;</span>
+<span class="cstat-no" title="statement not covered" >        options.lineWidth = $lineWidth;</span>
+<span class="cstat-no" title="statement not covered" >        return options;</span>
+    };
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getLastPeriods(){</span>
+<span class="cstat-no" title="statement not covered" >        GetLastPeriods.get({programId: $scope.programId}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.lastPeriods = data.lastPeriods;</span>
+<span class="cstat-no" title="statement not covered" >            dashboardMenuService.tabs = [];</span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach( $scope.lastPeriods, <span class="fstat-no" title="function not covered" >function(period){</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                dashboardMenuService.addTab("'"+period.name+"'",'/public/pages/dashboard/index_new.html#/dashboard-new?programId='+$scope.currentTab +'&amp;periodId='+period.id,period.name,false, period.id);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            $scope.dashboardPeriodTabs = dashboardMenuService.tabs;</span>
+<span class="cstat-no" title="statement not covered" >            if(!isUndefined($routeParams.periodId)){</span>
+<span class="cstat-no" title="statement not covered" >                $scope.currentSubTab = $scope.periodId = $routeParams.periodId;</span>
+            }else <span class="cstat-no" title="statement not covered" >if(!isUndefined($scope.dashboardPeriodTabs[0])){</span>
+<span class="cstat-no" title="statement not covered" >                $scope.currentSubTab = $scope.periodId =  $scope.dashboardPeriodTabs[0].id;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            dashboardMenuService.tabs = [];</span>
+        });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function(){</span></span>
+<span class="cstat-no" title="statement not covered" >            if(!isUndefined($scope.programId) &amp;&amp; !isUndefined($scope.periodId)) {</span>
+<span class="cstat-no" title="statement not covered" >                DashboardReportingPerformance.get({</span>
+                    programId: $scope.programId,
+                    periodId: $scope.periodId
+                }, <span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.reportingPerformance = data.reportingPerformance;</span>
+                });
+            }
+<span class="cstat-no" title="statement not covered" >            getDashboardSummary();</span>
+        }, 200);
+&nbsp;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDistrictStockSummary(){</span>
+        //alert('called')
+<span class="cstat-no" title="statement not covered" >        $scope.districtStockStatus = {};</span>
+<span class="cstat-no" title="statement not covered" >        $scope.productsDistrict = [];</span>
+<span class="cstat-no" title="statement not covered" >        var defaultProducts = 4;</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined($scope.programId) &amp;&amp; !isUndefined($scope.periodId)) {</span>
+<span class="cstat-no" title="statement not covered" >            DashboardDistrictStockSummary.get({programId: $scope.programId, periodId: $scope.periodId}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                var stockSummary = data.stockSummary;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var groupByProduct = _.groupBy(stockSummary, <span class="fstat-no" title="function not covered" >function(record){<span class="cstat-no" title="statement not covered" ></span>return record.productcode;}</span>);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                angular.forEach(groupByProduct, <span class="fstat-no" title="function not covered" >function(product){</span></span>
+<span class="cstat-no" title="statement not covered" >                    var groupByStock = _.groupBy(product, <span class="fstat-no" title="function not covered" >function(prd){<span class="cstat-no" title="statement not covered" ></span>return prd.indicator;}</span>);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.districtStockStatus[product[0].productcode] = groupByStock;</span>
+                });
+<span class="cstat-no" title="statement not covered" >                if(!isUndefined($scope.tracerProducts)){</span>
+<span class="cstat-no" title="statement not covered" >                    angular.forEach( $scope.tracerProducts , <span class="fstat-no" title="function not covered" >function(productDistrict){</span></span>
+<span class="cstat-no" title="statement not covered" >                        count = count + 1;</span>
+<span class="cstat-no" title="statement not covered" >                        var productCode = productDistrict[0].product_code;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.productsDistrict.push({'name':productDistrict[0].name,'code': productCode,</span>
+                            'topDispensed':  getDistrictStatusByCodeAndIndicator(productCode, 'DISPENSED'),
+                            'topAmc':  getDistrictStatusByCodeAndIndicator(productCode, 'AMC'),
+                            'topExpired': getDistrictStatusByCodeAndIndicator(productCode, 'EXPIRED'),
+                            'topDamaged':  getDistrictStatusByCodeAndIndicator(productCode, 'DAMAGED'),
+                            'topOverstocked':  getDistrictStatusByCodeAndIndicator(productCode, 'OVERSTOCKED'),
+                            'topUnderstocked': getDistrictStatusByCodeAndIndicator(productCode, 'UNDERSTOCKED'),
+                            'topAdequatelystocked':  getDistrictStatusByCodeAndIndicator(productCode, 'ADEQUATELYSTOCKED'),
+                            'topStockedOut':  getDistrictStatusByCodeAndIndicator(productCode, 'STOCKEDOUT'),
+                            'topLost':  getDistrictStatusByCodeAndIndicator(productCode, 'LOST'),
+                            'periods': $scope.periods.toString(),
+                            color: $scope.colorify(),
+                            'productDistrict': productDistrict,
+                            'consumptionChart': {openPanel:true},
+                            'utilizationChart': {openPanel:true},
+                            'stockingEfficiencyChart': {openPanel:true},
+                            'lossesAndAdjustmentChart': {openPanel:true},
+                            'selected': count &lt;= defaultProducts? true: false
+&nbsp;
+                        });
+                        //alert(JSON.stringify($scope.productsDistrict));
+                    });
+<span class="cstat-no" title="statement not covered" >                    getFacilityStockSummary();</span>
+                }//
+            });
+        }
+&nbsp;
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getFacilityStockSummary(){</span>
+<span class="cstat-no" title="statement not covered" >        $scope.facilityStockStatus = {};</span>
+<span class="cstat-no" title="statement not covered" >        $scope.productsFacility = [];</span>
+<span class="cstat-no" title="statement not covered" >        var defaultProducts = 4;</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined($scope.programId) &amp;&amp; !isUndefined($scope.periodId)) {</span>
+<span class="cstat-no" title="statement not covered" >            DashboardFacilityStockSummary.get({programId: $scope.programId, periodId: $scope.periodId}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                var stockSummary = data.stockSummary;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var groupByProduct = _.groupBy(stockSummary, <span class="fstat-no" title="function not covered" >function(record){<span class="cstat-no" title="statement not covered" ></span>return record.productcode;}</span>);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                angular.forEach(groupByProduct, <span class="fstat-no" title="function not covered" >function(product){</span></span>
+<span class="cstat-no" title="statement not covered" >                    var groupByStock = _.groupBy(product, <span class="fstat-no" title="function not covered" >function(prd){<span class="cstat-no" title="statement not covered" ></span>return prd.indicator;}</span>);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.facilityStockStatus[product[0].productcode] = groupByStock;</span>
+                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(!isUndefined($scope.tracerProducts)){</span>
+<span class="cstat-no" title="statement not covered" >                    angular.forEach( $scope.tracerProducts , <span class="fstat-no" title="function not covered" >function(productFacility){</span></span>
+<span class="cstat-no" title="statement not covered" >                        count = count + 1;</span>
+<span class="cstat-no" title="statement not covered" >                        var productCode = productFacility[0].product_code;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.productsFacility.push({'name':productFacility[0].name,'code': productCode,</span>
+                            'topFacilityDispensed':  getFacilityStatusByCodeAndIndicator(productCode, 'DISPENSED'),
+                            'topFacilityAmc':  getFacilityStatusByCodeAndIndicator(productCode, 'AMC'),
+                            'topFacilityExpired': getFacilityStatusByCodeAndIndicator(productCode, 'EXPIRED'),
+                            'topFacilityDamaged':  getFacilityStatusByCodeAndIndicator(productCode, 'DAMAGED'),
+                            'topFacilityOverstocked':  getFacilityStatusByCodeAndIndicator(productCode, 'OVERSTOCKED'),
+                            'topFacilityUnderstocked': getFacilityStatusByCodeAndIndicator(productCode, 'UNDERSTOCKED'),
+                            'topFacilityAdequatelystocked':  getFacilityStatusByCodeAndIndicator(productCode, 'ADEQUATELYSTOCKED'),
+                            'topFacilityOnhand':  getFacilityStatusByCodeAndIndicator(productCode, 'ONHAND'),
+                            'topFacilityLost':  getFacilityStatusByCodeAndIndicator(productCode, 'LOST'),
+                            'topFacilityFillrate': getFacilityStatusByCodeAndIndicator(productCode, 'FILLRATE'),
+                            color: $scope.colorify(),
+                            'productFacility': productFacility,
+                            'consumptionChart': {openPanel:true},
+                            'utilizationChart': {openPanel:true},
+                            'stockingEfficiencyChart': {openPanel:true},
+                            'lossesAndAdjustmentChart': {openPanel:true},
+                            'selected': count &lt;= defaultProducts? true: false
+                        });
+                    });
+                }//
+            });
+        }
+    }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.formatValue = <span class="fstat-no" title="function not covered" >function (value, ratio, id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return $filter('number')(value);</span>
+    };
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getFacilityStatusByCodeAndIndicator(code, indicator){</span>
+<span class="cstat-no" title="statement not covered" >        if(isUndefined($scope.facilityStockStatus) || isUndefined($scope.facilityStockStatus[code])) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >        if(indicator == 'FILLRATE'){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            return $scope.facilityStockStatus[code][indicator];</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return {'values': _.pluck($scope.facilityStockStatus[code][indicator], 'indicator_value').toString(), 'facilities': _.pluck($scope.facilityStockStatus[code][indicator], 'facilityname').toString() } ;</span>
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDistrictStatusByCodeAndIndicator(code, indicator){</span>
+<span class="cstat-no" title="statement not covered" >        if(isUndefined($scope.districtStockStatus) || isUndefined($scope.districtStockStatus[code])) <span class="cstat-no" title="statement not covered" >return null;</span></span>
+<span class="cstat-no" title="statement not covered" >        return {'values': _.pluck($scope.districtStockStatus[code][indicator], 'indicator_value').toString(), 'districts': _.pluck($scope.districtStockStatus[code][indicator], 'geographiczonename').toString() } ;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDashboardSummary(){</span>
+<span class="cstat-no" title="statement not covered" >        $scope.productsTrend = [];</span>
+<span class="cstat-no" title="statement not covered" >        var defaultProducts = 4;</span>
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined($scope.programId) &amp;&amp; !isUndefined($scope.periodId)){</span>
+<span class="cstat-no" title="statement not covered" >            GetProgramPeriodTracerProductsTrend.get({programId: $scope.programId, periodId: $scope.periodId,  limit: 5}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.tracerProducts = data.tracerProducts;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.sparkOption =  {  fillColor:'#F0F0F0', lineColor:'#ADA8A8',spotColor:'#ADA8A8e', width: '100%', chartRangeMin:'0', height:'20px'};</span>
+<span class="cstat-no" title="statement not covered" >                $scope.tracerProducts = _.groupBy(data.tracerProducts, <span class="fstat-no" title="function not covered" >function(record){<span class="cstat-no" title="statement not covered" ></span>return record.product_code;}</span>);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if(!isUndefined($scope.tracerProducts)){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    angular.forEach( $scope.tracerProducts , <span class="fstat-no" title="function not covered" >function(productTrend){</span></span>
+<span class="cstat-no" title="statement not covered" >                        count = count + 1;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.beginningBalanceValue = _.pluck(productTrend,'beginning_balance');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.quantityReceivedValue = _.pluck(productTrend,'quantity_received');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.quantityDispensedValue = _.pluck(productTrend,'quantity_dispensed');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.amcValues = _.pluck(productTrend, 'amc');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.sohValue = _.pluck(productTrend,'stock_in_hand_facility');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.overStockedValues = _.pluck(productTrend, 'number_of_facilities_overstocked');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.adequetlyStockedValues = _.pluck(productTrend, 'number_of_facilities_adquatelystocked');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.understockedValues = _.pluck(productTrend, 'number_of_facilities_understocked');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.stockedout = _.pluck(productTrend, 'total_facilities_stocked_out');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.quantityLost = _.pluck(productTrend, 'total_quantity_lost');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.quantityDamaged = _.pluck(productTrend, 'total_quantity_damaged');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.quantityExpired = _.pluck(productTrend, 'total_quantity_expired');</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.periods = _.pluck(productTrend, 'period_name').toString();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        var total_facility_stocked_out = _.findWhere(productTrend, {'order': 1}).total_facilities_stocked_out;</span>
+<span class="cstat-no" title="statement not covered" >                        var productCode = productTrend[0].product_code;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        $scope.productsTrend.push({'name':productTrend[0].name,'code': productCode,</span>
+                            "sohTrend": $scope.sohValue,
+                            'beginningBalance':$scope.beginningBalanceValue.toString(),
+                            'received':$scope.quantityReceivedValue.toString(),
+                            'consumption':$scope.quantityDispensedValue.toString(),
+                            'amc': $scope.amcValues.toString(),
+                            'soh': $scope.sohValue.toString(),
+                            'overStocked': $scope.overStockedValues.toString(),
+                            'adequetlyStocked' : $scope.adequetlyStockedValues.toString(),
+                            'understocked': $scope.understockedValues.toString(),
+                            'stockedout': $scope.stockedout.toString(),
+                            'quantityLost': $scope.quantityLost.toString(),
+                            'quantityDamaged': $scope.quantityDamaged.toString(),
+                            'quantityExpired': $scope.quantityExpired.toString(),
+                            'periods': $scope.periods.toString(),
+                            color: $scope.colorify(),
+                            'facilityStockedOut': total_facility_stocked_out,
+                            'productTrend': productTrend,
+                            'consumptionChart': {openPanel:true},
+                            'utilizationChart': {openPanel:true},
+                            'stockingEfficiencyChart': {openPanel:true},
+                            'lossesAndAdjustmentChart': {openPanel:true},
+                            'selected': count &lt;= defaultProducts? true: false
+                        });
+                    });
+                }
+<span class="cstat-no" title="statement not covered" >                getDistrictStockSummary();</span>
+            });
+        }
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.isProductSelected = <span class="fstat-no" title="function not covered" >function(code){</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var product = _.findWhere($scope.productSelections, {'code': code});</span>
+<span class="cstat-no" title="statement not covered" >          return isUndefined(product) ? false : product.selected;</span>
+    };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.setProductSelected = <span class="fstat-no" title="function not covered" >function(code,value){</span></span>
+<span class="cstat-no" title="statement not covered" >        var productDistrict = _.findWhere($scope.productsDistrict, {'code': code});</span>
+<span class="cstat-no" title="statement not covered" >        productDistrict.selected = value;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var productFacility = _.findWhere($scope.productsFacility, {'code': code});</span>
+<span class="cstat-no" title="statement not covered" >        productFacility.selected = value;</span>
+&nbsp;
+        //alert(JSON.stringify(code + "***" + value + "***" + product.selected));
+    };
+&nbsp;
+&nbsp;
+    /**
+     * A simple popover placement adjustment based on the current index position.
+     *
+     * @param index
+     * @returns {*}
+     */
+<span class="cstat-no" title="statement not covered" >    $scope.adjustPlacement = <span class="fstat-no" title="function not covered" >function(index){</span></span>
+<span class="cstat-no" title="statement not covered" >        if(index &lt; ($scope.productsTrend.length / 2)) {</span>
+<span class="cstat-no" title="statement not covered" >            return "right|top";</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return "right|bottom";</span>
+    };
+&nbsp;
+    /**
+     * Function that extracts product trends for this period and last period.
+     * It uses $scope.productsTrend to get the product by code and get productTrend property which holds all trends for all periods.
+     *
+     * @param code
+     */
+<span class="cstat-no" title="statement not covered" >    $scope.getProductSummary = <span class="fstat-no" title="function not covered" >function(code){</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.productSummary = [];</span>
+<span class="cstat-no" title="statement not covered" >        var product = _.findWhere($scope.productsTrend,{'code': code});</span>
+<span class="cstat-no" title="statement not covered" >        if(!isUndefined(product)){</span>
+            /*The order of trends is in a chronological order and can easily be queried using 'order' property on 'productTrend'*/
+<span class="cstat-no" title="statement not covered" >            var summary = product.productTrend;</span>
+<span class="cstat-no" title="statement not covered" >            var this_period_data = _.findWhere(summary, {'order': 1});</span>
+<span class="cstat-no" title="statement not covered" >            var last_period_data = _.findWhere(summary, {'order': 2});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.stock.on.hand.at.facility.level'), 'this_period': this_period_data.stock_in_hand_facility, 'last_period': last_period_data.stock_in_hand_facility});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.stock.on.hand.at.upper.level'), 'this_period': this_period_data.stock_in_hand_upper, 'last_period': last_period_data.stock_in_hand_upper});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.amc.at.facility.level'), 'this_period': this_period_data.amc, 'last_period': last_period_data.amc});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.expired.facility.level'), 'this_period': this_period_data.quantity_expired_facility, 'last_period': last_period_data.quantity_expired_facility});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.expired.upper.level'), 'this_period': this_period_data.quantity_expired_upper, 'last_period': last_period_data.quantity_expired_upper});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.mos.facility.level'), 'this_period': this_period_data.quantity_expired_upper, 'last_period': last_period_data.quantity_expired_upper});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.max.facility.level'), 'this_period': this_period_data.quantity_expired_upper, 'last_period': last_period_data.quantity_expired_upper});</span>
+<span class="cstat-no" title="statement not covered" >            $scope.productSummary.push({'label': messageService.get('label.min.facility.level'), 'this_period': this_period_data.quantity_expired_upper, 'last_period': last_period_data.quantity_expired_upper});</span>
+&nbsp;
+        }
+    };
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    /**
+     * Holds definition of legends for the mini consumption chart
+     *
+     * @type {*[]}
+     */
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.definitions = [</span>
+        {'label': messageService.get('label.stock.on.hand.at.facility.level'), 'definition' :  messageService.get('label.stock.on.hand.at.facility.level.definition')},
+        {'label': messageService.get('label.stock.on.hand.at.upper.level'), 'definition' :  messageService.get('label.stock.on.hand.at.upper.level.definition')},
+        {'label': messageService.get('label.amc.at.facility.level'), 'definition' :  messageService.get('label.amc.at.facility.level.definition')},
+        {'label': messageService.get('label.expired.facility.level'), 'definition' :  messageService.get('label.expired.facility.level.definition')},
+        {'label': messageService.get('label.expired.upper.level'), 'definition' :  messageService.get('label.expired.upper.level.definition')},
+        {'label': messageService.get('label.mos.facility.level'), 'definition' :  messageService.get('label.mos.facility.level.definition')},
+        {'label': messageService.get('label.max.facility.level'), 'definition' :  messageService.get('label.max.facility.level.definition')},
+        {'label': messageService.get('label.min.facility.level'), 'definition' :  messageService.get('label.min.facility.level.definition')}
+    ];
+&nbsp;
+    /**
+     * Function used to fetch list of facilities stock out for program, period and product code selected from dashboard page.
+     * It uses $scope.programId and $scope.periodId set per the dashboard page. Product code passed to this function when the user clicks on
+     * product consumption mini chart.
+     *
+     * @param code
+     */
+<span class="cstat-no" title="statement not covered" >    $scope.getFacilitiesStockedOut = <span class="fstat-no" title="function not covered" >function(code){</span></span>
+<span class="cstat-no" title="statement not covered" >        GetStockOutFacilitiesForProgramPeriodAndProductCode.get({programId: $scope.programId, periodId: $scope.periodId, productCode: code}, <span class="fstat-no" title="function not covered" >function(data){</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.facilities = data.facilities;</span>
+        });
+    };
+&nbsp;
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 18 2016 14:20:07 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

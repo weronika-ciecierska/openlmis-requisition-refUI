@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for shared/services/services.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">shared/services/services.js</span></h1>
+    <h2>
+        Statements: <span class="metric">67.42% <small>(149 / 221)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">37.04% <small>(40 / 108)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">67.42% <small>(149 / 221)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">shared/services/</a> &#187; services.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">22</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">103</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">48</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">19</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * This program is part of the OpenLMIS logistics management information system platform software.
+ * Copyright © 2013 VillageReach
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *  
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.
+ * You should have received a copy of the GNU Affero General Public License along with this program.  If not, see http://www.gnu.org/licenses.  For additional information contact info@OpenLMIS.org. 
+ */
+&nbsp;
+var services = angular.module('openlmis.services', ['ngResource']);
+var update = {update: {method: 'PUT'}};
+&nbsp;
+services.value('version', '@version@');
+&nbsp;
+services.factory('Programs', function ($resource) {
+  return $resource('/programs/:type.json', {type: '@type'}, {});
+});
+&nbsp;
+services.factory('UpdateProgram', function ($resource) {
+  return $resource('/programs/save.json', {}, update);
+});
+&nbsp;
+services.factory('RnRColumnList', function ($resource) {
+  return $resource('/program/:programId/rnr-template.json', {}, {});
+});
+&nbsp;
+services.factory('ProgramRnRColumnList', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/rnr/:programId/columns.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Facility', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  var resource = $resource('/facilities/:id.json', {id: '@id'}, update);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  resource.restore = <span class="fstat-no" title="function not covered" >function (pathParams, success, error) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $resource('/facilities/:id/restore.json', {}, update).update(pathParams, {}, success, error);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return resource;</span>
+});
+&nbsp;
+services.factory("Facilities", function ($resource) {
+  return $resource('/filter-facilities.json', {}, {});
+});
+&nbsp;
+services.factory("FacilityTypes", function ($resource) {
+  return $resource('/facility-types.json', {}, {});
+});
+&nbsp;
+services.factory('UserContext', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/user-context.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Users', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  var resource = $resource('/users/:id.json', {id: '@id'}, update);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  resource.disable = <span class="fstat-no" title="function not covered" >function (pathParams, success, error) {</span></span>
+<span class="cstat-no" title="statement not covered" >    $resource('/users/:id.json', {}, {update: {method: 'DELETE'}}).update(pathParams, {}, success, error);</span>
+  };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return resource;</span>
+});
+&nbsp;
+services.factory('UserFacilityList', function ($resource) {
+  return $resource('/user/facilities.json', {}, {});
+});
+&nbsp;
+services.factory('UserFacilityWithViewRequisition', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/user/facilities/view.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ProgramsToViewRequisitions', function ($resource) {
+  return $resource('/facility/:facilityId/view/requisition/programs.json', {}, {});
+});
+&nbsp;
+services.factory('ProgramSupportedByFacility', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facilities/:facilityId/programs.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ManageEquipmentInventoryProgramList', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/equipment/inventory/programs.json', {}, {});</span>
+});
+&nbsp;
+&nbsp;
+services.factory('FacilityReferenceData', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facilities/reference-data.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Rights', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/rights.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Roles', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/roles/:id.json', {id: '@id'}, update);</span>
+});
+&nbsp;
+services.factory('RolesFlat', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/roles-flat', {id: '@id'}, update);</span>
+});
+&nbsp;
+services.factory('CreateRequisitionProgramList', function ($resource) {
+  return $resource('/create/requisition/programs.json', {}, {});
+});
+&nbsp;
+services.factory('UserSupervisedFacilitiesForProgram', function ($resource) {
+  return $resource('/create/requisition/supervised/:programId/facilities.json', {}, {});
+});
+&nbsp;
+services.factory('ReferenceData', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/reference-data/currency.json', {}, {});</span>
+});
+&nbsp;
+services.factory('LineItemsPerPage', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/reference-data/pageSize.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Requisitions', function ($resource) {
+  return $resource('/requisitions/:id/:operation.json', {id: '@id', operation: '@operation'}, update);
+});
+&nbsp;
+services.factory('RequisitionForApproval', function ($resource) {
+  return $resource('/requisitions-for-approval.json', {}, {});
+});
+&nbsp;
+services.factory('RequisitionsForViewing', function ($resource) {
+  return $resource('/requisitions.json', {}, {});
+});
+&nbsp;
+services.factory('RequisitionForConvertToOrder', function ($resource) {
+  return $resource('/requisitions-for-convert-to-order.json', {}, {});
+});
+&nbsp;
+services.factory('LossesAndAdjustmentsReferenceData', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/requisitions/lossAndAdjustments/reference-data.json', {}, {});</span>
+});
+&nbsp;
+services.factory('DeleteRequisition', function ($resource) {
+  return $resource('/requisitions/delete/:id.json', {id: '@id'}, {post: {method: 'POST', isArray: false}});
+});
+&nbsp;
+services.factory('SkipRequisition', function ($resource) {
+  return $resource('/requisitions/skip/:id.json', {id: '@id'}, {post: {method: 'POST', isArray: false}});
+});
+&nbsp;
+services.factory('ReOpenRequisition', function ($resource) {
+  return $resource('/requisitions/reopen/:id.json', {id: '@id'}, {post: {method: 'POST', isArray: false}});
+});
+&nbsp;
+services.factory('RejectRequisition', function ($resource) {
+  return $resource('/requisitions/reject/:id.json', {id: '@id'}, {post: {method: 'POST', isArray: false}});
+});
+&nbsp;
+services.factory('Schedule', function ($resource) {
+  return $resource('/schedules/:id.json', {id: '@id'}, update);
+});
+&nbsp;
+services.factory('Periods', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/schedules/:scheduleId/periods.json', {}, {});</span>
+});
+&nbsp;
+services.factory('PeriodsForFacilityAndProgram', function ($resource) {
+  return $resource('/logistics/periods.json', {}, {});
+});
+&nbsp;
+services.factory('Period', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/periods/:id.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Program', function ($resource) {
+  return $resource('/programs/:id.json', {id: '@id'}, {});
+});
+&nbsp;
+services.factory('SupportedUploads', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/supported-uploads.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ForgotPassword', function ($resource) {
+  return $resource('/forgot-password.json', {}, {});
+});
+&nbsp;
+services.factory('FacilityApprovedNonFullSupplyProducts', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facilityApprovedProducts/facility/:facilityId/program/:programId/nonFullSupply.json', {}, {});</span>
+});
+&nbsp;
+services.factory('RequisitionLineItem', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/logistics/requisition/lineItem.json', {}, {});</span>
+});
+&nbsp;
+services.factory('UpdateUserPassword', function ($resource) {
+  return $resource('/user/resetPassword/:token.json', {}, update);
+});
+&nbsp;
+services.factory('ValidatePasswordToken', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/user/validatePasswordResetToken/:token.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Messages', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/messages.json', {}, {});</span>
+});
+&nbsp;
+services.factory('SupervisoryNodesPagedSearch', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/paged-search-supervisory-nodes.json', {}, {});</span>
+});
+&nbsp;
+services.factory('FacilityProgramRights', function ($resource) {
+  return $resource('/facility/:facilityId/program/:programId/rights.json');
+});
+&nbsp;
+services.factory('RequisitionComment', function ($resource) {
+  return $resource('/requisitions/:id/comments.json', {}, {});
+});
+&nbsp;
+services.factory('Orders', function ($resource) {
+  return $resource('/orders.json', {}, {post: {isArray: true, method: 'POST'}});
+});
+&nbsp;
+services.factory('OrdersForManagePOD', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/manage-pod-orders', {}, {});</span>
+});
+&nbsp;
+services.factory('ReportTemplates', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/report-templates.json', {}, {});</span>
+});
+&nbsp;
+//Allocation
+&nbsp;
+services.factory('ProgramProducts', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programProducts/programId/:programId.json', {}, {});</span>
+});
+&nbsp;
+services.factory('FacilityProgramProducts', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facility/:facilityId/program/:programId.json', {}, {update: {method: 'PUT'}});</span>
+});
+&nbsp;
+services.factory('ProgramProductsISA', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programProducts/:programProductId/isa/:isaId.json', {isaId: '@isaId'}, update);</span>
+});
+&nbsp;
+services.factory('FacilityProgramProductsISA', <span class="fstat-no" title="function not covered" >function ($resource)</span>
+{
+  //return $resource('/facility/:facilityId/programProducts/:programProductId/isa/:isaId.json', {isaId: '@isaId', facilityId: '@facilityId'}, update);
+<span class="cstat-no" title="statement not covered" >  return $resource('/facility/:facilityId/programProducts/:programProductId/isa.json', {}, update);</span>
+});
+&nbsp;
+services.factory('AllocationProgramProducts', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facility/:facilityId/programProduct/:programProductId.json', {}, update);</span>
+});
+&nbsp;
+services.factory('UserDeliveryZones', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/user/deliveryZones.json', {}, {});</span>
+});
+&nbsp;
+services.factory('DeliveryZone', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/deliveryZones/:id.json', {id: '@id'}, {});</span>
+});
+&nbsp;
+services.factory('DeliveryZoneActivePrograms', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/deliveryZones/:zoneId/activePrograms.json', {}, {});</span>
+});
+&nbsp;
+services.factory('DeliveryZonePrograms', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/deliveryZones/:zoneId/programs.json', {}, {});</span>
+});
+&nbsp;
+services.factory('DeliveryZoneProgramPeriods', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/deliveryZones/:zoneId/programs/:programId/periods.json', {}, {});</span>
+});
+&nbsp;
+services.factory('DeliveryZoneFacilities', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/deliveryZones/:deliveryZoneId/programs/:programId/facilities.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ProgramRegimens', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programId/:programId/regimens.json', {}, {});</span>
+});
+&nbsp;
+services.factory('RegimenCategories', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/regimenCategories.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Regimens', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programId/:programId/regimens.json', {}, {post: {method: 'POST', isArray: true}});</span>
+});
+&nbsp;
+services.factory('RegimenColumns', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programId/:programId/regimenColumns.json', {}, {});</span>
+});
+&nbsp;
+services.factory('RegimenTemplate', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programId/:programId/configureRegimenTemplate.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ProgramRegimenTemplate', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programId/:programId/programRegimenTemplate.json', {}, {});</span>
+});
+&nbsp;
+services.factory('GeographicZones', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/geographicZones/:id.json', {id: '@id'}, update);</span>
+});
+&nbsp;
+services.factory("GeographicZoneSearch", function ($resource) {
+  return $resource('/filtered-geographicZones.json', {}, {});
+});
+&nbsp;
+services.factory('Distributions', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/distributions.json', {}, {});</span>
+});
+&nbsp;
+services.factory('SyncFacilityDistributionData', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/distributions/:id/facilities/:facilityId.json', {}, update);</span>
+});
+&nbsp;
+services.factory('Locales', function ($resource) {
+  return $resource('/locales.json', {}, {});
+});
+&nbsp;
+services.factory('ChangeLocale', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/changeLocale.json', {}, update);</span>
+});
+&nbsp;
+services.factory('UpdatePassword', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/admin/resetPassword/:userId.json', {}, update);</span>
+});
+&nbsp;
+services.factory('OrderFileTemplate', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/order-file-template.json', {}, {post: {method: 'POST', isArray: true}});</span>
+});
+&nbsp;
+services.factory('DateFormats', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/date-formats.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ShipmentFileTemplate', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/shipment-file-template.json', {}, {post: {method: 'POST', isArray: true}});</span>
+});
+&nbsp;
+&nbsp;
+services.factory('BudgetFileTemplate', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/budget-file-template.json', {}, {post: {method: 'POST', isArray: true}});</span>
+});
+&nbsp;
+services.factory('EnabledWarehouse', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/enabledWarehouses.json', {}, {});</span>
+});
+&nbsp;
+services.factory('OrderPOD', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/pods/:action/:id.json', {id: '@id', action: '@action'}, update);</span>
+});
+&nbsp;
+services.factory('OrderNumberConfiguration', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/order-number-configuration.json', {}, {post: {method: 'POST'}});</span>
+});
+&nbsp;
+services.factory('GeoLevels', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/geographicLevels.json', {}, {});</span>
+});
+&nbsp;
+services.factory('GeographicZonesAboveLevel', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/parentGeographicZones/:geoLevelCode.json', {}, {});</span>
+});
+&nbsp;
+services.factory('SupervisoryNodes', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/supervisory-nodes/:id.json', {}, update);</span>
+});
+&nbsp;
+services.factory('SupplyLines', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/supplyLines/:id.json', {}, update);</span>
+});
+&nbsp;
+services.factory('ParentSupervisoryNodes', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/search-supervisory-nodes.json', {}, {});</span>
+});
+&nbsp;
+services.factory('RequisitionGroups', function ($resource) {
+  return $resource('/requisitionGroups/:id.json', {id: '@id'}, update);
+});
+&nbsp;
+services.factory('SupervisoryNodesSearch', function ($resource) {
+  return $resource('/search-supervisory-nodes.json', {}, {});
+});
+&nbsp;
+services.factory('TopLevelSupervisoryNodes', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/topLevelSupervisoryNodes.json', {}, {});</span>
+});
+&nbsp;
+services.factory('SupplyLinesSearch', function ($resource) {
+  return $resource('/supplyLines/search.json', {}, {});
+});
+&nbsp;
+services.factory('ProgramProductsFilter', function ($resource) {
+  return $resource('/programProducts/filter/programId/:programId/facilityTypeId/:facilityTypeId.json',
+      {programId: '@programId', facilityTypeId: '@facilityTypeId'}, {}, {});
+});
+&nbsp;
+services.factory('FacilityTypeApprovedProducts', function ($resource) {
+  return $resource('/facilityApprovedProducts/:id.json', {id: '@id'}, update);
+});
+&nbsp;
+services.factory('ProgramProductsSearch', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/programProducts/search.json', {}, {});</span>
+});
+&nbsp;
+services.factory('Reports', function ($resource) {
+  return $resource('/reports/:id/:format.json', {}, {});
+});
+&nbsp;
+services.factory('ProductGroups', function ($resource) {
+  return $resource('/products/groups.json', {}, {});
+});
+&nbsp;
+services.factory('ProductForms', function ($resource) {
+  return $resource('/products/forms.json', {}, {});
+});
+&nbsp;
+services.factory('DosageUnits', function ($resource) {
+  return $resource('/products/dosageUnits.json', {}, {});
+});
+&nbsp;
+services.factory('Products', function ($resource) {
+  return $resource('/products/:id.json', {id: '@id'}, update);
+});
+&nbsp;
+services.factory('ProductCategories', function ($resource) {
+  return $resource('/products/categories.json', {}, {});
+});
+&nbsp;
+&nbsp;
+services.factory('EquipmentOperationalStatus', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/equipment/type/operational-status.json',{},  {});</span>
+});
+&nbsp;
+services.factory('FacilityImages', <span class="fstat-no" title="function not covered" >function($resource){</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facility-images.json', {},{});</span>
+});
+&nbsp;
+services.factory('ConfigSettingsByKey',function($resource){
+  return $resource('/settings/:key.json',{},{});
+});
+&nbsp;
+services.factory('Supplylines', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/supplylines.json', {});</span>
+});
+&nbsp;
+services.factory('SupplyingDepots', function ($resource) {
+  return $resource('/supplyLines/supplying-depots.json', {});
+});
+&nbsp;
+services.factory('UserFacilityWithViewVaccineOrderRequisition', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/user/facilities/view-order-requisition.json', {}, {});</span>
+});
+&nbsp;
+services.factory('ProgramsToViewVaccineOrderRequisitions', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/facility/:facilityId/view/vaccine-order-requisition/programs.json', {}, {});</span>
+});
+&nbsp;
+services.factory('VaccineOrderRequisitionsForViewing', <span class="fstat-no" title="function not covered" >function ($resource) {</span>
+<span class="cstat-no" title="statement not covered" >  return $resource('/vaccine/orderRequisition/search.json', {}, {});</span>
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 22 2016 17:38:32 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
