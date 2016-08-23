@@ -8,7 +8,7 @@ out/
 gradle/
 node_modules/
 gradlew*
-.env
 .tx/
-api-definition.json
-api-definition.html
+src/test/coverage
+src/test/karma
+src/main/webapp/messages

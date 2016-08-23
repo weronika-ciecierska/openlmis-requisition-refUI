@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      clean: ['dist', 'src/main/webapp/public/minJs/', 'quality', 'src/main/webapp/messages_*.json', 'src/test/coverage/', 'src/test/karma/'],
+      clean: ['src/main/webapp/public/minJs/', 'quality'],
       jshint: {
         options: {
           undef: false,
@@ -78,7 +78,7 @@ module.exports = function (grunt) {
    propertiesToJSON: {
           main: {
               src: ['src/main/resources/messages_*.properties'],
-              dest: 'src/main/webapp'
+              dest: 'src/main/webapp/messages'
           }
       },
    karma: {
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
     }
   }
    });
-  grunt.registerTask('default', ['clean', 'propertiesToJSON', 'less', 'uglify']);
+  grunt.registerTask('default', ['clean', 'propertiesToJSON', 'less', 'uglify', 'serve']);
+  grunt.registerTask('build', ['clean', 'propertiesToJSON', 'less', 'uglify', 'karma']);
   grunt.registerTask('check', ['clean', 'jshint', 'lesslint']);
-  grunt.registerTask('test', 'karma')
 };
