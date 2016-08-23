@@ -4,4 +4,3 @@ services:
     image: openlmis/requisition-refui
     volumes:
       - '.:/app'
-    env_file: .env
