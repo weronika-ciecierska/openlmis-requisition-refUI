@@ -38,7 +38,8 @@ If you run the UI module, it should be available on port 9000.
 
 ```shell
 > docker-compose run --service-ports requisition-refui
-$ grunt
+$ grunt build
+$ grunt serve
 ```
 
 ### Build Deployment Image
