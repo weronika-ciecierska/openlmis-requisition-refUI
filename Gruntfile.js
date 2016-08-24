@@ -1,9 +1,11 @@
+
 module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+   var config = require('./config');
 
    grunt.initConfig({
       pkg: grunt.file.readJSON('package.json'),
-      clean: ['src/main/webapp/public/minJs/', 'quality'],
+      clean: ['src/main/webapp/public/minJs/', 'src/main/webapp/public/css/' ,'quality'],
       jshint: {
         options: {
           undef: false,
@@ -72,9 +74,9 @@ module.exports = function (grunt) {
               port: 9000,
               serve: {
                 path: './src/main/webapp/'
+                }
               }
-          }
-      },
+          },
    propertiesToJSON: {
           main: {
               src: ['src/main/resources/messages_*.properties'],
@@ -82,12 +84,21 @@ module.exports = function (grunt) {
           }
       },
    karma: {
-       unit: {
-       configFile: 'karma.config.js'
+      unit: {
+      configFile: 'karma.config.js'
+      }
+    },
+    replace: {
+      serverurl: {
+        src: ['src/main/webapp/public/**/*.js'],
+        overwrite: true,
+        replacements: [{
+            from: 'REQUISITION_SERVER_URL',
+            to:grunt.option('requisitionServerURL') || config.openlmisServerURL
+        }]
+      }
     }
-  }
-   });
-  grunt.registerTask('default', ['clean', 'propertiesToJSON', 'less', 'uglify', 'serve']);
-  grunt.registerTask('build', ['clean', 'propertiesToJSON', 'less', 'uglify', 'karma']);
+  });
+  grunt.registerTask('build', ['clean', 'propertiesToJSON', 'less', 'uglify', 'replace', 'karma']);
   grunt.registerTask('check', ['clean', 'jshint', 'lesslint']);
 };

@@ -24,9 +24,9 @@ describe("MessageService", function () {
     spyOn(localStorageService, 'get').andReturn('');
     spyOn(localStorageService, 'add');
 
-    var messagesReturned = {"messages":{"key":"message"}};
-    httpBackend.when('GET', '/messages.json').respond(messagesReturned);
-    messageService.populate();
+    var messagesReturned = {"key":"message"};
+    httpBackend.when('GET', '../messages/messages_en.json').respond(messagesReturned);
+    messageService.populate('en');
     httpBackend.flush();
     expect(localStorageService.add).toHaveBeenCalledWith('message.key', "message");
   });
@@ -35,7 +35,7 @@ describe("MessageService", function () {
     spyOn(localStorageService,'get').andReturn("@version@");
     spyOn(localStorageService, 'add');
 
-    messageService.populate();
+    messageService.populate('en');
     expect(localStorageService.add).not.toHaveBeenCalled();
   })
 

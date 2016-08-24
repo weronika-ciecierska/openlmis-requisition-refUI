@@ -11,4 +11,4 @@ gradlew*
 .tx/
 src/test/coverage
 src/test/karma
-src/main/webapp/messages
+src/main/webapp/public/messages

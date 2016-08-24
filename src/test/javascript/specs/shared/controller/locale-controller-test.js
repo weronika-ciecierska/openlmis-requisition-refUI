@@ -22,17 +22,14 @@ describe("LocaleController", function () {
     var messageService = _messageService_;
 
     var messagesReturned = {"messages": {"key": "message"}};
+    $httpBackend.expectGET('../messages/messages_pt.json').respond(messagesReturned);
 
-    $httpBackend.expectGET('/locales.json').respond(200, {locales: {pt: "portuguese", en: "English"}});
-    $httpBackend.when('GET', '/messages.json').respond(messagesReturned);
 
     controller = $controller(LocaleController, {$scope: scope, $rootScope: _$rootScope_, messageService: messageService,
       localStorageService: _localStorageService_, $cookies: _$cookies_});
   }));
 
   it("Should change the locale and clear local storage", function () {
-    $httpBackend.expectPUT('/changeLocale.json?locale=pt').respond(200);
-    $httpBackend.expectGET('/messages.json');
     scope.changeLocale('pt');
     $httpBackend.flush();
   });
